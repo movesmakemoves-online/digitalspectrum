@@ -103,3 +103,32 @@ if (contactForm) {
       });
   });
 }
+
+// Izmwear slideshow on card hover
+const izmwearCard = document.getElementById('izmwear-card');
+if (izmwearCard) {
+  const slides = izmwearCard.querySelectorAll('.slide');
+  let currentSlide = 0;
+  let slideshowInterval;
+
+  function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[n].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  izmwearCard.addEventListener('mouseenter', () => {
+    currentSlide = 0;
+    showSlide(0);
+    slideshowInterval = setInterval(nextSlide, 1800);
+  });
+
+  izmwearCard.addEventListener('mouseleave', () => {
+    clearInterval(slideshowInterval);
+    slides.forEach(slide => slide.classList.remove('active'));
+  });
+}

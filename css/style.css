@@ -486,6 +486,63 @@ p { margin: 0; color: var(--text-dim); }
 }
 .pricing-note { text-align: center; color: var(--text-faint); font-size: 0.88rem; margin-top: 40px; }
 
+/* ---------- Izmwear showcase with spectrum slideshow ---------- */
+.izmwear-showcase {
+  position: relative;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.izmwear-link {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.izmwear-link:hover {
+  transform: scale(1.02);
+}
+.izmwear-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.pricing-card--showcase:hover .izmwear-link {
+  display: none;
+}
+.pricing-card--showcase:hover .izmwear-slideshow {
+  display: block !important;
+}
+.izmwear-slideshow {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+  padding: 3px;
+}
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.slide {
+  width: 100%;
+  height: auto;
+  display: none;
+  animation: fadeIn 0.6s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.slide.active {
+  display: block;
+}
+
 /* ---------- Custom build / retainer callout ---------- */
 .custom-build-card {
   max-width: 640px;
