@@ -25,13 +25,19 @@
 ### To make the site live and findable
 6. ~~Domain name~~ — **done**: `digitalspectrumlabs.co.uk` bought through Cloudflare Registrar
    (at cost, no markup, free WHOIS privacy included).
-7. ~~Business email + automatic lead capture~~ — **done**: Cloudflare Email Routing set up,
-   Gmail verified as destination, `support@digitalspectrumlabs.co.uk` created and routed to
-   the deployed `dsl-lead-router` Worker, which forwards every email to Gmail AND logs it to
-   the GitHub repo. Worker deployed, `GITHUB_TOKEN` secret set.
+7. ~~Business email + automatic lead capture~~ — **done 2026-08-18** (corrected — this was
+   marked done on 2026-08-05 but wasn't): Gmail was verified as a destination and the
+   `support@` rule existed, but **Email Routing was never switched on at the zone level**
+   (`enabled: false, status: unconfigured` in Cloudflare), so no mail to `support@` was ever
+   actually routed anywhere the whole time this said "done." Found and fixed 2026-08-18 via
+   the Cloudflare API (read-only checks first, then enabled with the user's go-ahead):
+   Email Routing is now `enabled: true, status: ready`, and both `support@` and `services@`
+   route to the deployed `dsl-lead-router` Worker, which forwards every email to Gmail AND
+   logs it to `leads/inbox/` in the GitHub repo. Worker deployed, `GITHUB_TOKEN` secret set.
    **Still to do here:** point the custom domain at the Netlify site (Netlify → Domain
    management → add `digitalspectrumlabs.co.uk`), and send one real test email to
-   `support@digitalspectrumlabs.co.uk` to confirm the whole chain works end to end.
+   `support@digitalspectrumlabs.co.uk` (or `services@`) to confirm the whole chain works
+   end to end now that routing is actually live.
 8. **Rename the GitHub repo** — go to github.com/movesmakemoves-online/Izm-Studio/settings,
    change the repo name field to `Digital-Spectrum-Labs`, click Rename. (Netlify's deploy
    source will need repointing to the new repo URL after — check Netlify still builds
@@ -63,11 +69,8 @@
     video goes. Each one should explain what that service is and how easy it is to get
     started. Once filmed, send them over and they get dropped straight in — the slot is
     already built and styled.
-17. **Create `services@digitalspectrumlabs.co.uk` in Cloudflare Email Routing** — the site
-    now shows this address on the Contact page, but the routing rule set up earlier was for
-    `support@`. Until `services@` exists as a rule, mail sent to it will bounce.
-    Cloudflare → Email Routing → Routing rules → Create address → `services` →
-    Send to a Worker (`dsl-lead-router`) or Send to an email → Save.
+17. ~~Create `services@digitalspectrumlabs.co.uk` in Cloudflare Email Routing~~ — **done
+    2026-08-18**, routes to `dsl-lead-router`, same as `support@`. See item 7 above.
 
 10. **Real portfolio content** — done for Hand Made By You and Little VIPs (added as real,
     honestly-labeled "in development" case studies). Flyer design, CD covers, and AI
@@ -79,6 +82,23 @@
     an AI image presented as a literal photo of a specific real person or team that
     doesn't exist risks misleading-advertising territory. Real photo is the safest bet
     when you have one.
+
+### New since the 2026-08-18 email routing fix
+18. **Send a real test email to `support@digitalspectrumlabs.co.uk` or `services@...`** —
+    from any other email account. Email Routing is now correctly configured (fixed
+    2026-08-18, see item 7) but nothing has actually landed yet, so it's proven-correct on
+    paper, not proven-working in practice. Check for it arriving in Gmail and as a new file
+    under `leads/inbox/` in the repo — both should show up within a minute or two.
+19. **Point the custom domain at the Netlify site** — Netlify → Domain management → add
+    `digitalspectrumlabs.co.uk`. The domain is bought and DNS is on Cloudflare, but the live
+    site is still only reachable at `digitalspectrum.netlify.app`, so outreach links and the
+    Contact page's own email domain don't match where the site actually lives yet.
+20. **Decide: should Claude read Gmail directly going forward, not just the GitHub relay?**
+    A Gmail connector was confirmed working 2026-08-18 (read/search/label/draft/send,
+    authenticated for movesmakemoves@gmail.com) — separate from the Gmail *website*, which
+    stays blocked from browser automation. Reading/searching directly would have caught the
+    routing outage days sooner than the relay did. Sending would stay gated regardless. Your
+    call whether to approve standing read access for the ops-agent's checks.
 
 ## What's NOT blocking launch
 Design, copy, structure, all 5 services, and all 4 package tiers are real and ready.
