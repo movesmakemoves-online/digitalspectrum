@@ -509,8 +509,11 @@ p { margin: 0; color: var(--text-dim); }
   width: 100%;
   height: auto;
 }
-.pricing-card--showcase:hover .izmwear-link {
+.izmwear-slideshow {
   display: none;
+}
+.pricing-card--showcase:hover .izmwear-link {
+  display: none !important;
 }
 .pricing-card--showcase:hover .izmwear-slideshow {
   display: block !important;
@@ -536,9 +539,9 @@ p { margin: 0; color: var(--text-dim); }
   background: var(--surface);
 }
 .slide {
-  width: 100%;
-  height: auto;
-  display: none;
+  width: 100% !important;
+  height: auto !important;
+  display: none !important;
   animation: fadeIn 0.8s;
 }
 @keyframes fadeIn {
@@ -546,7 +549,7 @@ p { margin: 0; color: var(--text-dim); }
   to { opacity: 1; transform: scale(1); }
 }
 .slide.active {
-  display: block;
+  display: block !important;
 }
 
 /* ---------- Custom build / retainer callout ---------- */
