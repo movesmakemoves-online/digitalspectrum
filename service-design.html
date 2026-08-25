@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="service-design">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -57,14 +79,60 @@
   <section class="section service-video-section">
     <div class="container">
       <h1 class="section-title reveal service-page-title">Graphic Design</h1>
-      <div class="video-placeholder reveal">
-        <div class="video-placeholder-inner">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          <p><strong>Video placeholder</strong></p>
-          <p class="video-placeholder-note">
-            A short video explaining this service and how easy it is to get started goes here.
-          </p>
+      <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+        <div>
+          <div class="video-placeholder reveal" style="padding: 0; overflow: hidden;">
+            <video autoplay muted loop playsinline controls style="width: 100%; display: block; border-radius: 8px;">
+              <source src="assets/service-design-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+        <div style="position: sticky; top: 100px;">
+          <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+          <div style="font-size: 13px; line-height: 1.6;">
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Do you include font files?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. All designs come with licensed fonts. We handle licensing and delivery.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Can I get my files editable?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. We deliver AI, PSD, and PDF files so you can edit or pass to your team.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">What if I need print versions?</summary>
+              <p style="margin-top: 8px; color: #666;">We deliver print-ready files (CMYK, bleed, resolution) for all materials.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How many revisions included?</summary>
+              <p style="margin-top: 8px; color: #666;">Most projects: 1–2 rounds. Brand packages get 3 revisions. Premium: unlimited.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Can you build a full brand?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. Brand Starter (£450) includes a logo, brand guidelines and social graphics, with 3 rounds of revisions.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO COPY -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal" style="max-width: 780px;">
+        <p>
+          Whether it's a poster for one night or a full brand identity that'll be on everything
+          you put out, good design is what makes people take a second look. We design flyers,
+          cover art, logos and full brand kits that actually look like they belong to a real,
+          considered business &mdash; not something knocked together in an evening.
+        </p>
+        <p>
+          Prices are fixed and quoted upfront &mdash; flyers from &pound;99, logos from
+          &pound;99, a full brand starter pack from &pound;450. Half to begin, half once you're
+          happy with the final files. Revisions are built into every job, so you're not paying
+          extra to get it right.
+        </p>
       </div>
     </div>
   </section>
@@ -74,24 +142,24 @@
     <div class="container">
       <div class="grid grid-3 option-grid">
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">01</span>
           <h2>Start something from scratch</h2>
           <p>A one-off flyer, cover art for a release, or a full brand identity built from the ground up.</p>
           <span class="option-cta">Get started &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">02</span>
           <h2>Refresh what you have</h2>
           <p>Artwork or branding that no longer feels right? We can bring it up to date while keeping what people already recognise.</p>
           <span class="option-cta">Tell us what you have &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="packages.html">
+        <a class="card option-card reveal" href="#platinum">
           <span class="option-step">03</span>
           <h2>See the packages</h2>
-          <p>Basic, Standard and Enhanced tiers, plus a monthly retainer if you would rather spread the work across the year.</p>
+          <p>Our Platinum full-service package, plus a monthly retainer if you would rather spread the work across the year.</p>
           <span class="option-cta">Compare packages &rarr;</span>
         </a>
 
@@ -113,13 +181,94 @@
         </ul>
       </div>
       <div class="info-block reveal">
-        <h2 class="section-title">How getting started works</h2>
+        <h2 class="section-title">How it works</h2>
         <ol class="detail-list detail-list--numbered">
-          <li>Tell us what you need &mdash; a couple of lines is enough to begin with.</li>
-          <li>We come back with a written quote covering what is included, the price and rough timings.</li>
-          <li>Once you are happy, work begins. Projects over &pound;500 start with a 50% deposit.</li>
-          <li>When it is finished it is yours. Keep us on to look after it, or take it and run it yourself.</li>
+          <li>Tell us what you need and where it's going. &ldquo;I'm launching a club night and need a poster plus Instagram graphics&rdquo; is enough.</li>
+          <li>We come back with a written quote and a sense of style direction before any design work starts.</li>
+          <li>Happy to go ahead? We put together initial concepts for you to react to.</li>
+          <li>We refine based on your feedback &mdash; this is the back-and-forth bit, and it's included.</li>
+          <li>Once you're happy, we deliver print-ready and web-ready files, sized for wherever they're going.</li>
+          <li>It's yours to use however you like. Need it resized for something else later? Just ask.</li>
         </ol>
+        <div style="margin-top: 20px; padding: 16px 18px; background: rgba(102, 126, 234, 0.05); border-radius: 8px; font-size: 0.9rem; line-height: 1.6; color: #555;">
+          <strong>For example:</strong> say you're launching a new club night and need a poster plus a set of Instagram graphics. We'd start with a quick brief on the vibe you're going for, put together a couple of concepts, refine the one you like, then deliver print-ready files for the poster and ready-to-post sizes for Instagram and stories.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Pricing</h2>
+      <p class="section-sub reveal" style="margin-bottom: 32px;">Starting prices &mdash; every quote is confirmed in writing before work begins.</p>
+      <div class="grid grid-4">
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Flyer Design</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;99</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Cover Art</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;125+</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Logo Design</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;99+</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Brand Starter</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;450</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">Logo, brand guidelines and social graphics, 3 rounds of revisions.</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top: 12px;"><a href="#platinum" class="option-cta">See our Platinum package &amp; retainer &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- PLATINUM -->
+  <section class="section section-alt" id="platinum">
+    <div class="container">
+      <p class="eyebrow reveal">Full VIP Service</p>
+      <h2 class="section-title reveal">Platinum</h2>
+      <div class="grid" style="grid-template-columns: minmax(0, 480px); justify-content: center; margin-top: 24px;">
+        <article class="card pricing-card pricing-card--featured reveal">
+          <p class="pricing-badge">Full VIP Service</p>
+          <h3 class="pricing-tier">Platinum</h3>
+          <p class="pricing-desc">Full-scope design build with ongoing support &mdash; the complete VIP treatment for a brand that needs to make an impression.</p>
+          <p class="pricing-price">&pound;799<span>starting</span></p>
+          <ul class="pricing-list">
+            <li>Unlimited deliverables (scoped)</li>
+            <li>Unlimited revisions</li>
+            <li>Rush turnaround available</li>
+            <li>30 days post-launch support</li>
+            <li>Dedicated project lead</li>
+            <li>Priority access throughout</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-full">Choose Platinum</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER -->
+  <section class="section">
+    <div class="container">
+      <div class="custom-build-card reveal">
+        <p class="eyebrow">Ongoing Support</p>
+        <h2 class="section-title">Design Retainer</h2>
+        <p class="section-sub">
+          For brands that need ongoing design support, not just a one-off project &mdash;
+          regular graphics, updates and priority turnaround. Predictable monthly cost, cancel
+          anytime.
+        </p>
+        <ul class="detail-list">
+          <li>Set monthly hours of design support</li>
+          <li>Priority turnaround over one-off project work</li>
+          <li>Rolls over unused hours one month</li>
+          <li>Month-to-month, no long-term contract</li>
+        </ul>
+        <p class="pricing-price" style="margin-top: 24px;">&pound;450<span>per month, starting</span></p>
+        <a href="quote.html" class="btn btn-primary">Start a Retainer</a>
       </div>
     </div>
   </section>
@@ -137,6 +286,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -145,5 +295,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

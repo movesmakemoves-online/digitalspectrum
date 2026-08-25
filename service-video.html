@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="service-video">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -57,14 +79,60 @@
   <section class="section service-video-section">
     <div class="container">
       <h1 class="section-title reveal service-page-title">Video Production</h1>
-      <div class="video-placeholder reveal">
-        <div class="video-placeholder-inner">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          <p><strong>Video placeholder</strong></p>
-          <p class="video-placeholder-note">
-            A short video explaining this service and how easy it is to get started goes here.
-          </p>
+      <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+        <div>
+          <div class="video-placeholder reveal" style="padding: 0; overflow: hidden;">
+            <video autoplay muted loop playsinline controls style="width: 100%; display: block; border-radius: 8px;">
+              <source src="assets/service-video-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+        <div style="position: sticky; top: 100px;">
+          <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+          <div style="font-size: 13px; line-height: 1.6;">
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Do you provide filming?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. We offer professional filming at £99/hour with lighting and sound included.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How many revisions do I get?</summary>
+              <p style="margin-top: 8px; color: #666;">Standard edits include 2 revision rounds. Premium projects get unlimited revisions.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">What format do you deliver?</summary>
+              <p style="margin-top: 8px; color: #666;">We deliver MP4 for web, vertical for mobile, and high-res for broadcasting.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Can you add music and graphics?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. Motion graphics, color grading, music, and sound design all included.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How long does editing take?</summary>
+              <p style="margin-top: 8px; color: #666;">Standard edits: 5–10 days. Promo videos: 10–15 days. Rush service available.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO COPY -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal" style="max-width: 780px;">
+        <p>
+          Good video sells in a way text and photos can't &mdash; whether that's a music video, a
+          promo for your business, or short clips built for social. We handle the whole thing:
+          filming if you need it, editing, colour grading, sound, all finished to a standard
+          that's actually worth posting.
+        </p>
+        <p>
+          Every job gets a written quote before we start &mdash; a standard edit from
+          &pound;250, a promo video from &pound;500, a music video from &pound;350, filming by
+          the day from &pound;750. Half upfront, half on delivery, and you'll see a draft before
+          anything's locked in so there are no surprises at the end.
+        </p>
       </div>
     </div>
   </section>
@@ -74,24 +142,24 @@
     <div class="container">
       <div class="grid grid-3 option-grid">
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">01</span>
           <h2>Start a new video</h2>
           <p>From the idea through to the finished cut, including planning the shoot and everything that happens after it.</p>
           <span class="option-cta">Get started &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">02</span>
           <h2>Edit footage you already have</h2>
           <p>Got footage sitting on a drive doing nothing? We can cut it, grade it and turn it into something you can actually put out.</p>
           <span class="option-cta">Tell us what you have &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="packages.html">
+        <a class="card option-card reveal" href="#platinum">
           <span class="option-step">03</span>
           <h2>See the packages</h2>
-          <p>Basic, Standard and Enhanced tiers, plus a monthly retainer if you would rather spread the work across the year.</p>
+          <p>Our Platinum full-service package, plus a monthly retainer if you would rather spread the work across the year.</p>
           <span class="option-cta">Compare packages &rarr;</span>
         </a>
 
@@ -112,13 +180,103 @@
         </ul>
       </div>
       <div class="info-block reveal">
-        <h2 class="section-title">How getting started works</h2>
+        <h2 class="section-title">How it works</h2>
         <ol class="detail-list detail-list--numbered">
-          <li>Tell us what you need &mdash; a couple of lines is enough to begin with.</li>
-          <li>We come back with a written quote covering what is included, the price and rough timings.</li>
-          <li>Once you are happy, work begins. Projects over &pound;500 start with a 50% deposit.</li>
-          <li>When it is finished it is yours. Keep us on to look after it, or take it and run it yourself.</li>
+          <li>Tell us what you've got and what it's for. &ldquo;I've got footage from a gig and want a highlights reel for Instagram&rdquo; is plenty.</li>
+          <li>We come back with a written quote covering the edit, the style and the turnaround time.</li>
+          <li>Happy to go ahead? Send over your footage (or we can film it) and we get cutting.</li>
+          <li>We share a draft for you to react to before anything's locked in.</li>
+          <li>We polish it &mdash; colour, sound, titles &mdash; and deliver it in whatever formats you need.</li>
+          <li>It's yours to post, broadcast or send wherever you like. Need more cut down the line? We're here.</li>
         </ol>
+        <div style="margin-top: 20px; padding: 16px 18px; background: rgba(102, 126, 234, 0.05); border-radius: 8px; font-size: 0.9rem; line-height: 1.6; color: #555;">
+          <strong>For example:</strong> say you're releasing a new single and need a music video. We'd talk through the look and feel you want, work from your footage (or help you film it), send a first cut for feedback, then finish it with colour grading and titles &mdash; ready to release in around 2 to 3 weeks.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Pricing</h2>
+      <p class="section-sub reveal" style="margin-bottom: 32px;">Starting prices &mdash; every quote is confirmed in writing before work begins.</p>
+      <div class="grid grid-4">
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Promo Video</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;500&ndash;&pound;3,000</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">From AI-generated to full 8K cameras and crew.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Music Video</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;350&ndash;&pound;2,500</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">From AI-generated to full film crew, script writing and storyboard.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Filming</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;99/hour</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">Day rate &pound;750.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Standard Edit</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;250</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">AI-prompted edit.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Content Creation</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;99</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">Photos, video and captions, branded to you.</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top: 24px; font-size: 0.9rem; color: #666;">Bigger or more custom productions run &pound;350&ndash;&pound;5,500+ depending on scope, and can go higher for full crews and specific requests &mdash; tell us what you're picturing for an exact quote.</p>
+      <p class="reveal" style="margin-top: 12px;"><a href="#platinum" class="option-cta">See our Platinum package &amp; retainer &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- PLATINUM -->
+  <section class="section section-alt" id="platinum">
+    <div class="container">
+      <p class="eyebrow reveal">Full VIP Service</p>
+      <h2 class="section-title reveal">Platinum</h2>
+      <div class="grid" style="grid-template-columns: minmax(0, 480px); justify-content: center; margin-top: 24px;">
+        <article class="card pricing-card pricing-card--featured reveal">
+          <p class="pricing-badge">Full VIP Service</p>
+          <h3 class="pricing-tier">Platinum</h3>
+          <p class="pricing-desc">Full-scope video production with ongoing support &mdash; the complete VIP treatment from concept to final cut.</p>
+          <p class="pricing-price">&pound;4,499<span>starting</span></p>
+          <ul class="pricing-list">
+            <li>Unlimited deliverables (scoped)</li>
+            <li>Unlimited revisions</li>
+            <li>Rush turnaround available</li>
+            <li>30 days post-launch support</li>
+            <li>Dedicated project lead</li>
+            <li>Priority access throughout</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-full">Choose Platinum</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER -->
+  <section class="section">
+    <div class="container">
+      <div class="custom-build-card reveal">
+        <p class="eyebrow">Ongoing Support</p>
+        <h2 class="section-title">Video Retainer</h2>
+        <p class="section-sub">
+          For brands that need a steady stream of video content, not a one-off edit &mdash;
+          ongoing production support with priority turnaround. Predictable monthly cost,
+          cancel anytime.
+        </p>
+        <ul class="detail-list">
+          <li>Set monthly hours of filming/editing support</li>
+          <li>Priority turnaround over one-off project work</li>
+          <li>Rolls over unused hours one month</li>
+          <li>Month-to-month, no long-term contract</li>
+        </ul>
+        <p class="pricing-price" style="margin-top: 24px;">&pound;450<span>per month, starting</span></p>
+        <a href="quote.html" class="btn btn-primary">Start a Retainer</a>
       </div>
     </div>
   </section>
@@ -136,6 +294,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -144,5 +303,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

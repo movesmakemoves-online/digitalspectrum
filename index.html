@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body data-page="home">
 
@@ -40,10 +41,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -64,7 +81,7 @@
       <video src="assets/work/reel-conference-stage.mp4" poster="assets/work/reel-conference-stage-poster.webp" autoplay muted loop playsinline></video>
     </a>
     <a class="marquee-item" href="work.html">
-      <img src="assets/work/flyer-get-found-online.webp" alt="Flyer design for a small business workshop">
+      <video src="assets/work/cinematic-promo-ad.mp4" autoplay muted loop playsinline></video>
     </a>
     <a class="marquee-item" href="work.html">
       <video src="assets/work/reel-production-rig.mp4" poster="assets/work/reel-production-rig-poster.webp" autoplay muted loop playsinline></video>
@@ -83,7 +100,7 @@
       <video src="assets/work/reel-conference-stage.mp4" poster="assets/work/reel-conference-stage-poster.webp" autoplay muted loop playsinline></video>
     </a>
     <a class="marquee-item" href="work.html" aria-hidden="true" tabindex="-1">
-      <img src="assets/work/flyer-get-found-online.webp" alt="">
+      <video src="assets/work/cinematic-promo-ad.mp4" autoplay muted loop playsinline></video>
     </a>
     <a class="marquee-item" href="work.html" aria-hidden="true" tabindex="-1">
       <video src="assets/work/reel-production-rig.mp4" poster="assets/work/reel-production-rig-poster.webp" autoplay muted loop playsinline></video>
@@ -100,16 +117,15 @@
   <section class="hero">
     <div class="hero-spectrum" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <p class="eyebrow reveal">Design &middot; Development &middot; Media &middot; AI &middot; Growth</p>
+      <p class="eyebrow reveal">From Idea to Identity</p>
       <h1 class="hero-title reveal">
-        Helping Your Business Keep Up<br>
-        <span class="text-gradient">With the Digital World</span>
+        We can help you find the right<br>
+        <span class="text-gradient">digital solution for your business</span>
       </h1>
       <div class="hero-copy reveal">
         <p>
-          The online world is constantly changing, and keeping your business up to date can be a
-          challenge. <strong>Digital Spectrum Labs</strong> helps businesses make the most of
-          today's digital landscape with practical, creative and tailored solutions.
+          Websites, apps, AI, marketing, design and video production &mdash; all under one roof.
+          <strong>Digital Spectrum Labs</strong> turns your idea into a working digital identity.
         </p>
       </div>
     </div>
@@ -126,7 +142,7 @@
             <svg viewBox="0 0 24 24"><path d="M4 4h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6v2h2a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h2v-2H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v10h14V6H5z"/></svg>
           </div>
           <h3>Websites, Apps &amp; Games</h3>
-          <p>From a simple landing page to a full product build — websites, mobile apps, and custom games designed and developed end to end.</p>
+          <p>From a simple landing page to a full product build — we design and develop websites, mobile apps and custom games, start to finish.</p>
         </article>
 
         <article class="card service-card reveal">
@@ -134,7 +150,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           </div>
           <h3>AI for Your Business</h3>
-          <p>Practical AI help — chatbots, automations, content tools, and strategy so your business runs faster with less manual work.</p>
+          <p>Practical AI, not hype — chatbots, automation and content tools that save your business real time.</p>
         </article>
 
         <article class="card service-card reveal">
@@ -142,7 +158,7 @@
             <svg viewBox="0 0 24 24"><rect x="3" y="14" width="4" height="7" rx="1"/><rect x="10" y="9" width="4" height="12" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
           </div>
           <h3>Growth &amp; Marketing</h3>
-          <p>SEO, email marketing, social retainers, and CRM setup — getting the right people to actually find what we built you.</p>
+          <p>SEO, email marketing, social retainers and CRM setup — getting the right people to actually find you.</p>
         </article>
 
         <article class="card service-card reveal">
@@ -150,7 +166,7 @@
             <svg viewBox="0 0 24 24"><path d="M4 5h13a1 1 0 0 1 1 1v2.5l4.15-2.6A1 1 0 0 1 23.5 6.7v10.6a1 1 0 0 1-1.35.94L18 15.5V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>
           </div>
           <h3>Video Production</h3>
-          <p>Music videos, short films, and promo edits — shot-ready cuts, color grading, motion graphics, and sound design.</p>
+          <p>Music videos, short films and promo edits — shot, cut, graded and finished properly.</p>
         </article>
 
         <article class="card service-card reveal">
@@ -158,25 +174,19 @@
             <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
           </div>
           <h3>Graphic Design</h3>
-          <p>Flyers, CD &amp; album covers, posters, business cards, social graphics, and full brand identities that actually get noticed.</p>
+          <p>Flyers, cover art, posters, business cards and social graphics — brand identities that actually get noticed.</p>
         </article>
 
       </div>
 
       <div class="hero-copy post-services reveal">
         <p>
-          Does your business have a website? Could it benefit from a refresh, ongoing maintenance
-          or new features? Perhaps you're looking to improve your marketing, create engaging video
-          content, develop an app or game, or explore how AI can help your business grow.
-        </p>
-        <p>
-          Whatever your digital needs, we work with businesses like yours to provide the right
-          solutions — from <strong>websites, apps and games to AI, marketing, video production and
-          graphic design</strong>.
+          Not sure where to start? You don't need a technical brief or a finished idea &mdash;
+          tell us what you're trying to achieve and we'll help you find the right fit, whether
+          that's one service or a few working together.
         </p>
         <p class="hero-close">
-          Let's bring your business up to date, keep it moving forward and help you make the most
-          of what digital spectrum has to offer.
+          From idea to identity, we help you get there &mdash; and keep it moving once you're live.
         </p>
       </div>
 
@@ -212,6 +222,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -219,6 +230,25 @@
   </div>
 </footer>
 
+<!-- Chat assistant lead forms (Netlify Forms — detected at deploy time, submitted via fetch()
+     from js/chatbot.js from any page on the site, not just this one). Hidden from visitors;
+     the chat widget builds the actual conversation UI. -->
+<form name="chatbot-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="chatbot-lead">
+  <input name="bot-field">
+  <input name="request_type"><input name="name"><input name="email"><input name="business">
+  <input name="goal"><input name="has_website"><input name="has_social"><input name="sells_online">
+  <input name="recommended_services"><input name="message"><input name="page"><input name="timestamp">
+</form>
+<form name="chatbot-query" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="chatbot-query">
+  <input name="bot-field">
+  <input name="question"><input name="matched"><input name="page"><input name="timestamp">
+</form>
+
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>
+

@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body data-page="about">
 
@@ -40,10 +41,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -55,45 +72,67 @@
 
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow reveal">About</p>
-      <h1 class="section-title reveal">Two Decades In Media. One Direct Line To The Person Doing The Work.</h1>
+      <p class="eyebrow reveal">From Idea to Identity</p>
+      <h1 class="section-title reveal">Here to Help</h1>
     </div>
   </section>
 
   <section class="section">
-    <div class="container about-inner">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
       <div class="about-text reveal">
         <p>
-          Digital Spectrum Labs grew out of over 20 years in
-          the media business — starting in artist development, moving into filmmaking, and
-          eventually building the websites and digital tools that artists, brands, and businesses
-          actually needed. That range is the whole point: creative work and digital work depend on
-          each other, and I've spent two decades on both sides of that line.
+          I've spent the last 20 years working in media — from artist development to filmmaking to everything in between. Now, I'm here with a small, close-knit team helping businesses and creators navigate an ever-changing digital landscape.
         </p>
         <p>
-          Everything on this site, I needed myself first — the website, the tools, the digital
-          groundwork behind a real business. I started Digital Spectrum Labs to pass that same
-          benefit on: sorting out your digital spectrum, the whole range of design, development,
-          video, and AI a modern brand needs, handled in one place instead of by five different
-          vendors who've never spoken to each other.
+          We don't believe in account managers or corporate jargon. You work directly with the person building your project. We're honest about what you need (not what sells), and we focus on function first — design and polish come after.
         </p>
         <p>
-          <strong>Who you actually get:</strong> me. Not an account manager, not a junior handed
-          your project after the sales call. You deal directly with the person doing the work, which
-          means nothing gets lost in translation and you always know exactly where things stand. For
-          larger builds I bring in trusted freelance specialists I've worked with for years — but I
-          stay the single point of contact, and I'm accountable for what gets delivered either way.
+          Whether it's your first website, your first video, or automating your entire operation, we're here to help you get it right.
         </p>
-        <p>
-          Every project is built at your pace, tailored to what you actually need — not a fixed
-          template. Once it's built, it's yours: keep me on to manage and grow it, or take it and
-          run it yourself. No lock-in, no pressure either way.
-        </p>
-        <p>
-          I work with small and growing businesses on full digital consultancy — and with bloggers,
-          YouTubers, and musicians who need the same range of skills on a creator's budget. Past
-          work spans music videos, short films, and the websites and brand systems behind them.
-        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 32px;">
+          <div class="reveal" style="text-align: center;">
+            <img src="assets/team-group.png" alt="The Digital Spectrum Labs team" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: 12px;">
+            <h3 style="font-size: 14px; margin-bottom: 2px;">The Team</h3>
+          </div>
+          <div class="reveal" style="text-align: center;">
+            <img src="assets/team-tim.png" alt="Tim" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: 12px;">
+            <h3 style="font-size: 14px; margin-bottom: 2px;">Tim</h3>
+          </div>
+          <div class="reveal" style="text-align: center;">
+            <img src="assets/team-jenny.png" alt="Jenny" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: 12px;">
+            <h3 style="font-size: 14px; margin-bottom: 2px;">Jenny</h3>
+          </div>
+          <div class="reveal" style="text-align: center;">
+            <img src="assets/team-donna.png" alt="Donna" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: 12px;">
+            <h3 style="font-size: 14px; margin-bottom: 2px;">Donna</h3>
+          </div>
+        </div>
+      </div>
+      <div style="position: sticky; top: 100px;">
+        <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+        <div style="font-size: 13px; line-height: 1.6;">
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">Who is on your team?</summary>
+            <p style="margin-top: 8px; color: #666;">A small, experienced team of designers, developers, filmmakers, and strategists. No middlemen, direct access to everyone working on your project.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">How long have you been doing this?</summary>
+            <p style="margin-top: 8px; color: #666;">20+ years in media, working with artists, creators, and businesses across multiple industries and platforms.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">What's your process?</summary>
+            <p style="margin-top: 8px; color: #666;">We listen first, diagnose the real need, then design and build to solve it. Honest feedback from the start, no guessing games.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">Do you work with startups?</summary>
+            <p style="margin-top: 8px; color: #666;">Yes. We work with startups, freelancers, small businesses, and larger companies. Every project gets the same attention.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">Can we schedule a call?</summary>
+            <p style="margin-top: 8px; color: #666;">Yes. Use our Calendly link in the Contact page to book a 30-minute strategy call anytime.</p>
+          </details>
+        </div>
       </div>
       <div class="about-stats reveal">
         <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Years In Media</span></div>
@@ -103,11 +142,37 @@
     </div>
   </section>
 
+  <!-- VALUES -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal" style="text-align: center;">What We Believe</h2>
+      <p class="section-sub reveal" style="text-align: center; max-width: 600px; margin: 0 auto 40px;">The principles behind every project, big or small.</p>
+      <div class="grid grid-3" style="gap: 24px;">
+        <div class="card reveal" style="padding: 24px;">
+          <h3 style="font-size: 1.05rem; margin: 0 0 8px;">Directness</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">No account managers, no middlemen. You talk to the people actually building your project.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <h3 style="font-size: 1.05rem; margin: 0 0 8px;">Function first</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">We solve the real problem before we make it look good. Polish comes after it works.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <h3 style="font-size: 1.05rem; margin: 0 0 8px;">Honesty over sales</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">We tell you what you actually need, not whatever's easiest for us to sell.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <h3 style="font-size: 1.05rem; margin: 0 0 8px;">One team, every skill</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">Design, development, video and AI under one roof, working together instead of being farmed out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section cta-band section-alt">
     <div class="container cta-band-inner reveal">
       <h2 class="section-title">Ready to bring your brand together?</h2>
       <p class="section-sub">Let's talk about what you're building.</p>
-      <a href="contact.html" class="btn btn-primary">Start a Project</a>
+      <a href="quote.html" class="btn btn-primary">Start a Project</a>
     </div>
   </section>
 
@@ -124,6 +189,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -132,5 +198,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

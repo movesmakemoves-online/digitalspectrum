@@ -1,17 +1,35 @@
 # Digital Spectrum Labs — Path to Launch
 
-(renamed from Izm Media Services / Izm Studio — see design/what-we-built-and-why.md style notes if that history matters later)
+(renamed from Digital Spectrum Labs / Izm Studio — see design/what-we-built-and-why.md style notes if that history matters later)
 
-## Done
-- [x] Full site built: home, services, packages, work, about, contact
+## ⚠️ Critical blocker as of 2026-08-25
+**Nothing built since 2026-08-19 is live.** The last commit to GitHub was 2026-08-19 — 9 commits
+plus a large set of uncommitted changes (the entire pricing/payments restructure, Platinum
+packages, packages.html removal, homepage rewrite, discount code removal, about page values,
+team photos, all 5 service videos, the chat widget) have never been pushed. Netlify only builds
+from GitHub, so the live site at `digitalspectrum.netlify.app` is still serving the Aug 19
+version. **This must be committed and pushed before any other launch step matters.**
+
+## Done (verified live in the files 2026-08-25, pending the push above)
+- [x] Full site built: home, services, pricing, work, about, contact
 - [x] New brand: name, logo (prism/spectrum mark), full site rename
 - [x] Growth & Marketing added as a 5th service line (SEO, email marketing, social retainers, CRM setup)
-- [x] Monthly Retainer tier added to Packages, alongside Basic/Standard/Enhanced and Custom Web Applications
 - [x] Services reordered site-wide: Websites/Apps/Games, AI for Business, Growth & Marketing, Video Production (renamed from Music Video & Film Editing), Graphic Design
-- [x] Committed to git, pushed to GitHub (currently under repo name "Izm-Studio" — needs renaming to match)
+- [x] Committed to git, pushed to GitHub (currently under repo name "Izm-Studio" — needs renaming to match) — **note: this refers to the pre-2026-08-19 history; everything since is unpushed, see blocker above**
 - [x] Deployed to Vercel (currently on a "Pro Trial" — needs migrating to Netlify instead, since Vercel's free tier bans commercial use and Netlify's allows it)
 - [x] **Fixed a real bug (2026-08-04): the contact form had no code behind it at all** — "Send Request" did nothing. Now wired as a Netlify Form (works automatically once deployed on Netlify, zero backend needed) with a JS fallback message if it ever fails. Also fixed the visible contact email, which pointed at hello@digitalspectrumlabs.com — a mailbox that doesn't exist yet since the domain isn't purchased — now points at movesmakemoves@gmail.com until real business email exists.
 - [x] **Deployed to Netlify (2026-08-04)** — live at digitalspectrum.netlify.app, deploying from the GitHub repo. Made public (was gated behind Netlify's team-login wall at first). Form notifications wired to movesmakemoves@gmail.com and verified end-to-end with a real test submission — email arrived. The contact form is fully functional in production, not just in theory.
+- [x] **Pricing fully restructured (2026-08-25)** — `packages.html` (Basic/Standard/Enhanced) retired.
+  New `pricing.html` is the site-wide "view all prices" page; `payments.html` is now pure
+  how-to-pay content (methods, Stripe invoicing, timing) with zero prices on it. Every service
+  page now has its own real Pricing section, plus its own Platinum package (£799–£4,499
+  depending on service, individually calculated) and its own Retainer (£450/mo). All expired
+  discount codes (AUG2026, the £799 bundle deal) removed site-wide.
+- [x] **Team photos and all 5 service page videos are live** — not placeholders any more (the
+  Aug-dated "still to film/add" notes below are stale, kept only until this is pushed and
+  confirmed live in production).
+- [x] **Chat assistant widget built** (`js/chatbot.js`, `js/chatbot-data.js`, `css/chatbot.css`)
+  — rule-based, no AI API cost. Live on all pages, not yet pushed (see blocker above).
 
 ## What's left — grouped by what's needed from you
 
@@ -47,12 +65,14 @@
 9. ~~Move hosting from Vercel to Netlify~~ — **done 2026-08-04**, see above.
 
 ### Legal — required before promoting to customers
-13. **Privacy policy and terms** — **drafted 2026-08-12**: `privacy.html` and `terms.html`
-    added and linked in the footer of every page. UK GDPR requires a privacy policy because
-    the contact form collects personal data. **Both contain `[PLACEHOLDER]` fields you must
-    fill in** (your legal name, business address, publish date, sole trader vs limited
-    company). These are solid working drafts, not legal advice — worth a solicitor's eye
-    before you take real money, especially the terms.
+13. **Privacy policy and terms** — **drafted 2026-08-12, still not filled in (checked
+    2026-08-25)**: `privacy.html` and `terms.html` added and linked in the footer of every
+    page. UK GDPR requires a privacy policy because the contact form collects personal data.
+    **Both still contain bracketed placeholders** — `[sole trader / limited company — DELETE
+    AS APPROPRIATE]`, `[ADD YOUR FULL LEGAL NAME OR REGISTERED COMPANY NAME]`, `[ADD YOUR
+    BUSINESS ADDRESS]`, `[If a limited company, add: Company number 00000000]` — you need to
+    fill these in with real details. These are solid working drafts, not legal advice — worth
+    a solicitor's eye before you take real money, especially the terms.
 14. **Trading details must be displayed** — UK law requires a sole trader to show their full
     name and a business address on the website (limited companies must also show company
     number and registered office). Currently the site only says "United Kingdom" — this needs
@@ -63,12 +83,9 @@
     needs updating first.
 
 ### Content — in progress
-16. **Film a short video for each of the five service pages** — each page
-    (`service-websites`, `service-ai`, `service-growth`, `service-video`,
-    `service-design`) currently shows a dashed "Video placeholder" box at the top where the
-    video goes. Each one should explain what that service is and how easy it is to get
-    started. Once filmed, send them over and they get dropped straight in — the slot is
-    already built and styled.
+16. ~~Film a short video for each of the five service pages~~ — **done**: real videos are wired
+    into all 5 service pages (`assets/service-websites-video.mp4` etc.), confirmed loading.
+    Not yet pushed to production — see blocker at the top of this file.
 17. ~~Create `services@digitalspectrumlabs.co.uk` in Cloudflare Email Routing~~ — **done
     2026-08-18**, routes to `dsl-lead-router`, same as `support@`. See item 7 above.
 
@@ -76,12 +93,11 @@
     honestly-labeled "in development" case studies). Flyer design, CD covers, and AI
     integration samples still placeholder — add when available.
 11. **About page** — rewritten with a real founder story (20+ years media background,
-    "needed it for myself, now sharing it") — currently marked as a placeholder draft in
-    the HTML for you to edit with concrete specifics when ready.
-12. **Team/founder photo** — flagged: an AI-generated *illustrative* image is fine to use;
-    an AI image presented as a literal photo of a specific real person or team that
-    doesn't exist risks misleading-advertising territory. Real photo is the safest bet
-    when you have one.
+    "needed it for myself, now sharing it"), plus a "What We Believe" values section added
+    2026-08-25. Jenny and Donna still need job titles (only Tim's "CEO" is confirmed).
+12. ~~Team/founder photo~~ — **done**: real team photos live (`assets/team-group.png`,
+    `team-tim.png`, `team-jenny.png`, `team-donna.png`) on the About page. Not yet pushed —
+    see blocker at the top of this file.
 
 ### New since the 2026-08-18 email routing fix
 18. **Send a real test email to `support@digitalspectrumlabs.co.uk` or `services@...`** —

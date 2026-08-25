@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="privacy">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -69,13 +91,11 @@
 
         <h2>Who we are</h2>
         <p>
-          Digital Spectrum Labs is a [sole trader / limited company — DELETE AS APPROPRIATE]
-          based in the United Kingdom.
+          Digital Spectrum Labs is a sole trader based in the United Kingdom.
         </p>
         <p>
-          <strong>[ADD YOUR FULL LEGAL NAME OR REGISTERED COMPANY NAME]</strong><br>
+          <strong>[ADD YOUR FULL LEGAL NAME]</strong><br>
           [ADD YOUR BUSINESS ADDRESS]<br>
-          [If a limited company, add: Company number 00000000]<br>
           Email: <a href="mailto:support@digitalspectrumlabs.co.uk">support@digitalspectrumlabs.co.uk</a>
         </p>
         <p>
@@ -185,6 +205,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -193,5 +214,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

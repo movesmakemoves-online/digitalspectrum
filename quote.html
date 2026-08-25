@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote — Digital Spectrum Labs</title>
+<meta name="description" content="Start a project with Digital Spectrum Labs — design, development, video editing, and AI solutions.">
+<link rel="icon" href="assets/dsl-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+
+  .quote-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .quote-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .quote-sidebar-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+  }
+
+  .quote-sidebar-box h3 {
+    font-size: 15px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .quote-sidebar-box details {
+    margin-bottom: 10px;
+  }
+
+  .quote-sidebar-box summary {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .quote-sidebar-box details p {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .payment-mini {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .payment-mini strong {
+    color: #333;
+  }
+
+  @media (max-width: 900px) {
+    .quote-layout {
+      grid-template-columns: 1fr;
+    }
+    .quote-sidebar {
+      position: static;
+    }
+  }
+</style>
+</head>
+<body data-page="quote">
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/dsl-mark.svg" alt="" class="brand-logo">
+      <span class="brand-name">Digital <em>Spectrum</em> Labs</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <div class="nav-item has-dropdown">
+        <a href="services.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html">AI for Your Business</a>
+          <a href="service-growth.html">Growth &amp; Marketing</a>
+          <a href="service-video.html">Video Production</a>
+          <a href="service-design.html">Graphic Design</a>
+        </div>
+      </div>
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
+    </nav>
+
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow reveal">Get In Touch</p>
+      <h1 class="section-title reveal">Start Your Project</h1>
+      <p class="section-sub reveal">Tell us what you need and pick a starting package — we'll follow up with a custom quote.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="quote-layout">
+
+        <form class="contact-form reveal" id="contact-form" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="quote">
+          <p class="hidden-field" hidden>
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option>Website / App / Game</option>
+              <option>AI for Business</option>
+              <option>Growth &amp; Marketing</option>
+              <option>Video Production</option>
+              <option>Graphic Design</option>
+              <option>Something else / mixed</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="package">Package</label>
+            <select id="package" name="package">
+              <option>Platinum</option>
+              <option>Monthly Retainer</option>
+              <option>Custom Project</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+
+        <div class="quote-sidebar">
+
+          <!-- FAQ -->
+          <div class="quote-sidebar-box reveal">
+            <h3>FAQ</h3>
+            <details>
+              <summary>Is my payment secure?</summary>
+              <p>Yes. We use Stripe, trusted by millions of businesses worldwide. Your card details never touch our servers.</p>
+            </details>
+            <details>
+              <summary>What if the cost goes up?</summary>
+              <p>We always tell you first and get your approval before any extra invoice.</p>
+            </details>
+            <details>
+              <summary>What's your refund policy?</summary>
+              <p>Quick purchases (under £500): full refund within 30 days if unused. Custom projects: deposits are non-refundable once work begins.</p>
+            </details>
+            <details>
+              <summary>Can I pay in installments?</summary>
+              <p>For projects over £3,000, yes — ask in the form above.</p>
+            </details>
+          </div>
+
+          <!-- PAYMENT INFO -->
+          <div class="quote-sidebar-box reveal">
+            <h3>How Payment Works</h3>
+            <p class="payment-mini"><strong>Quick Purchases:</strong> fixed price, instant checkout via payment link.</p>
+            <p class="payment-mini"><strong>Custom Projects:</strong> quote → 50% upfront → work → final payment on delivery.</p>
+            <p class="payment-mini"><strong>Accepted:</strong> Card, Apple Pay, Google Pay, Bank Transfer — all via Stripe.</p>
+            <a href="payments.html" style="font-size: 12px; color: #667eea; font-weight: 600; text-decoration: none;">See full pricing &rarr;</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/dsl-mark.svg" alt="" class="brand-logo">
+      <span class="brand-name">Digital <em>Spectrum</em> Labs</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="payments.html">How to Pay</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <p class="footer-copy">&copy; <span id="year"></span> Digital Spectrum Labs. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

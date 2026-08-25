@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="service-growth">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -57,14 +79,60 @@
   <section class="section service-video-section">
     <div class="container">
       <h1 class="section-title reveal service-page-title">Growth &amp; Marketing</h1>
-      <div class="video-placeholder reveal">
-        <div class="video-placeholder-inner">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          <p><strong>Video placeholder</strong></p>
-          <p class="video-placeholder-note">
-            A short video explaining this service and how easy it is to get started goes here.
-          </p>
+      <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+        <div>
+          <div class="video-placeholder reveal" style="padding: 0; overflow: hidden;">
+            <video autoplay muted loop playsinline controls style="width: 100%; display: block; border-radius: 8px;">
+              <source src="assets/service-growth-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+        <div style="position: sticky; top: 100px;">
+          <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+          <div style="font-size: 13px; line-height: 1.6;">
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How often should I update my SEO?</summary>
+              <p style="margin-top: 8px; color: #666;">Monthly optimization keeps you competitive. We handle ongoing updates and track rankings.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Can you help with social media?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. We offer content calendar, posting, and strategy for 2-5 platforms per month.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">What if my site isn't getting traffic?</summary>
+              <p style="margin-top: 8px; color: #666;">We start with a free audit to identify gaps. Then implement targeted SEO or paid ads.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Do you offer email marketing?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. We set up sequences, automation, and list management to nurture leads.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How do I measure success?</summary>
+              <p style="margin-top: 8px; color: #666;">Monthly reports show traffic, rankings, conversions, and ROI. Clear metrics every step.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO COPY -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal" style="max-width: 780px;">
+        <p>
+          Being brilliant at what you do doesn't matter much if the right people can't find you.
+          We handle the side of the business most owners don't have time for &mdash; SEO, email
+          marketing, social media, and making sure your online presence actually brings in
+          customers instead of just looking nice.
+        </p>
+        <p>
+          One-off jobs like an SEO audit (from &pound;350) or email setup (from &pound;350) are
+          priced and quoted upfront, paid the same way as everything else &mdash; half to start,
+          half on delivery. Ongoing work like monthly SEO or social management runs as a
+          retainer, so you get consistent effort every month instead of a one-off push that fades.
+        </p>
       </div>
     </div>
   </section>
@@ -74,24 +142,24 @@
     <div class="container">
       <div class="grid grid-3 option-grid">
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">01</span>
           <h2>Start getting found</h2>
           <p>No marketing in place yet? We start with the basics that move the needle: being findable in search, and a way to keep in touch with people who visit.</p>
           <span class="option-cta">Get started &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">02</span>
           <h2>Improve what is already running</h2>
           <p>Running some marketing but unsure whether it works? We review what you have, keep what earns its place and drop what does not.</p>
           <span class="option-cta">Tell us what you have &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="packages.html">
+        <a class="card option-card reveal" href="#platinum">
           <span class="option-step">03</span>
           <h2>See the packages</h2>
-          <p>Basic, Standard and Enhanced tiers, plus a monthly retainer if you would rather spread the work across the year.</p>
+          <p>Our Platinum full-service package, plus a monthly retainer if you would rather spread the work across the year.</p>
           <span class="option-cta">Compare packages &rarr;</span>
         </a>
 
@@ -112,13 +180,94 @@
         </ul>
       </div>
       <div class="info-block reveal">
-        <h2 class="section-title">How getting started works</h2>
+        <h2 class="section-title">How it works</h2>
         <ol class="detail-list detail-list--numbered">
-          <li>Tell us what you need &mdash; a couple of lines is enough to begin with.</li>
-          <li>We come back with a written quote covering what is included, the price and rough timings.</li>
-          <li>Once you are happy, work begins. Projects over &pound;500 start with a 50% deposit.</li>
-          <li>When it is finished it is yours. Keep us on to look after it, or take it and run it yourself.</li>
+          <li>Tell us what &ldquo;more customers&rdquo; looks like for you. &ldquo;I want more people finding my caf&eacute; on Instagram&rdquo; is a great starting point.</li>
+          <li>We look at what you're doing already and come back with a written plan &mdash; channels, content, and a realistic idea of what it costs and what it should bring in.</li>
+          <li>Happy to go ahead? We set everything up &mdash; accounts, campaigns, automations &mdash; properly, not just switched on and hoped for.</li>
+          <li>We run it, post it, send it &mdash; whatever the plan calls for &mdash; and check in with you regularly.</li>
+          <li>We show you what's working with plain-English reporting, not just numbers on a screen.</li>
+          <li>Keep it running as a monthly retainer, or take stock of what we've built and carry it on yourself.</li>
         </ol>
+        <div style="margin-top: 20px; padding: 16px 18px; background: rgba(102, 126, 234, 0.05); border-radius: 8px; font-size: 0.9rem; line-height: 1.6; color: #555;">
+          <strong>For example:</strong> say you run a local caf&eacute; and want more people finding you online. We'd start with a quick audit of your Instagram and Google listing, put together a simple content and posting plan, then start posting and tracking what actually brings people through the door &mdash; with a monthly check-in showing what's working.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Pricing</h2>
+      <p class="section-sub reveal" style="margin-bottom: 32px;">Starting prices &mdash; every quote is confirmed in writing before work begins.</p>
+      <div class="grid grid-4">
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">SEO Audit</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;350</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Email Setup</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;350</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">SEO (Monthly)</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;350&ndash;&pound;1,200</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Social Setup</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;199/month</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top: 24px; font-size: 0.9rem; color: #666;">Running a bigger, multi-channel campaign? That's scoped individually &mdash; get in touch for a custom quote.</p>
+      <p class="reveal" style="margin-top: 12px;"><a href="#platinum" class="option-cta">See our Platinum package &amp; retainer &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- PLATINUM -->
+  <section class="section section-alt" id="platinum">
+    <div class="container">
+      <p class="eyebrow reveal">Full VIP Service</p>
+      <h2 class="section-title reveal">Platinum</h2>
+      <div class="grid" style="grid-template-columns: minmax(0, 480px); justify-content: center; margin-top: 24px;">
+        <article class="card pricing-card pricing-card--featured reveal">
+          <p class="pricing-badge">Full VIP Service</p>
+          <h3 class="pricing-tier">Platinum</h3>
+          <p class="pricing-desc">Full-scope marketing build with ongoing support &mdash; the complete VIP treatment for a launch or a serious push.</p>
+          <p class="pricing-price">&pound;1,999<span>starting</span></p>
+          <ul class="pricing-list">
+            <li>Unlimited deliverables (scoped)</li>
+            <li>Unlimited revisions</li>
+            <li>Rush turnaround available</li>
+            <li>30 days post-launch support</li>
+            <li>Dedicated project lead</li>
+            <li>Priority access throughout</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-full">Choose Platinum</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER -->
+  <section class="section">
+    <div class="container">
+      <div class="custom-build-card reveal">
+        <p class="eyebrow">Ongoing Support</p>
+        <h2 class="section-title">Growth Retainer</h2>
+        <p class="section-sub">
+          For brands that need continuous marketing effort, not a one-off campaign &mdash;
+          ongoing SEO, email and social management with priority turnaround. Predictable
+          monthly cost, cancel anytime.
+        </p>
+        <ul class="detail-list">
+          <li>Set monthly hours of SEO/email/social support</li>
+          <li>Priority turnaround over one-off project work</li>
+          <li>Rolls over unused hours one month</li>
+          <li>Month-to-month, no long-term contract</li>
+        </ul>
+        <p class="pricing-price" style="margin-top: 24px;">&pound;450<span>per month, starting</span></p>
+        <a href="quote.html" class="btn btn-primary">Start a Retainer</a>
       </div>
     </div>
   </section>
@@ -136,6 +285,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -144,5 +294,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

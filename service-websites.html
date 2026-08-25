@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="service-websites">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -57,14 +79,63 @@
   <section class="section service-video-section">
     <div class="container">
       <h1 class="section-title reveal service-page-title">Websites, Apps &amp; Games</h1>
-      <div class="video-placeholder reveal">
-        <div class="video-placeholder-inner">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          <p><strong>Video placeholder</strong></p>
-          <p class="video-placeholder-note">
-            A short video explaining this service and how easy it is to get started goes here.
-          </p>
+      <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+        <div>
+          <div class="video-placeholder reveal" style="padding: 0; overflow: hidden;">
+            <video autoplay muted loop playsinline controls style="width: 100%; display: block; border-radius: 8px;">
+              <source src="assets/service-websites-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+        <div style="position: sticky; top: 100px;">
+          <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+          <div style="font-size: 13px; line-height: 1.6;">
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How long does a website take?</summary>
+              <p style="margin-top: 8px; color: #666;">Most websites take 2-4 weeks depending on scope. Express builds available.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Will it work on mobile?</summary>
+              <p style="margin-top: 8px; color: #666;">Every site is mobile-first. Tested on all devices and browsers.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Can you update it after launch?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. Monthly retainer or pay-per-edit. Full support included.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Do you provide hosting?</summary>
+              <p style="margin-top: 8px; color: #666;">We recommend and set up Netlify (included). You own the domain.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">What if I need an app instead?</summary>
+              <p style="margin-top: 8px; color: #666;">Mobile apps start at £500. We build cross-platform (iOS + Android).</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO COPY -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal" style="max-width: 780px;">
+        <p>
+          Your website or app is often the first real impression someone gets of your business
+          &mdash; before they call, before they visit, before they buy. We build ones that load
+          fast, work properly on every device, and actually do the job you need them to do,
+          whether that's taking bookings, selling products, or just making you look as good as
+          you actually are.
+        </p>
+        <p>
+          Getting started is simple: tell us what you need, we send a written quote with a clear
+          price and timeline, and once you're happy we get to work &mdash; keeping you updated the
+          whole way. Most projects run on a 50% deposit upfront and the balance on delivery, with
+          prices starting from &pound;199 for a simple landing page up to a few thousand for a
+          full custom build. Once it's live, we can keep looking after it too, or hand it over for
+          you to run yourself.
+        </p>
       </div>
     </div>
   </section>
@@ -74,24 +145,24 @@
     <div class="container">
       <div class="grid grid-3 option-grid">
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">01</span>
           <h2>Build something new</h2>
           <p>Starting from nothing, or replacing a site that has had its day. We plan it, design it, build it and hand it over working.</p>
           <span class="option-cta">Get started &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">02</span>
           <h2>Update or maintain what you have</h2>
           <p>Already have a site but it looks dated, loads slowly, or nobody is looking after it? We can refresh it or take over the upkeep.</p>
           <span class="option-cta">Tell us what you have &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="packages.html">
+        <a class="card option-card reveal" href="#platinum">
           <span class="option-step">03</span>
           <h2>See the packages</h2>
-          <p>Basic, Standard and Enhanced tiers, plus a monthly retainer if you would rather spread the work across the year.</p>
+          <p>Our Platinum full-service package, plus a monthly retainer if you would rather spread the work across the year.</p>
           <span class="option-cta">Compare packages &rarr;</span>
         </a>
 
@@ -113,13 +184,121 @@
         </ul>
       </div>
       <div class="info-block reveal">
-        <h2 class="section-title">How getting started works</h2>
+        <h2 class="section-title">How it works</h2>
         <ol class="detail-list detail-list--numbered">
-          <li>Tell us what you need &mdash; a couple of lines is enough to begin with.</li>
-          <li>We come back with a written quote covering what is included, the price and rough timings.</li>
-          <li>Once you are happy, work begins. Projects over &pound;500 start with a 50% deposit.</li>
-          <li>When it is finished it is yours. Keep us on to look after it, or take it and run it yourself.</li>
+          <li>Tell us what you're picturing. &ldquo;I want an app so my gym members can book classes from their phone&rdquo; is plenty to start with &mdash; no spec document needed.</li>
+          <li>We ask a few follow-up questions, then send a written quote: what's included, the price, and a realistic timeline.</li>
+          <li>Happy to go ahead? We map out every screen and feature first, so you can see the whole thing before any building starts.</li>
+          <li>We build it, sharing progress as it takes shape so nothing arrives as a surprise.</li>
+          <li>We test it properly &mdash; real devices, real browsers &mdash; then launch it.</li>
+          <li>It's yours. Keep us on to add features and fix things as you grow, or take it and run it yourself.</li>
         </ol>
+        <div style="margin-top: 20px; padding: 16px 18px; background: rgba(102, 126, 234, 0.05); border-radius: 8px; font-size: 0.9rem; line-height: 1.6; color: #555;">
+          <strong>For example:</strong> say you run a gym and want an app for members to book classes and check their membership. We'd start with a call to understand what needs booking and how payments should work, map out the screens, build and test it on real phones, then launch &mdash; usually 4 to 8 weeks depending on how much it needs to do.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Pricing</h2>
+      <p class="section-sub reveal" style="margin-bottom: 32px;">Starting prices &mdash; every quote is confirmed in writing before work begins.</p>
+      <div class="grid grid-4">
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Landing Page</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;199</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">A simple online presence &mdash; info, pictures, contact details and products for a small business.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Business Website</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;1,199+</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">Starting from &mdash; built around whatever your business actually needs.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">E-commerce Site</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;500 / &pound;1,499+</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">&pound;500 for a Shopify setup, or a custom build from &pound;1,499.</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Custom App / Game</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0 0 8px;">&pound;500&ndash;&pound;3,000</p>
+          <p style="font-size: 0.82rem; color: #666; margin: 0;">E.g. a booking app for a personal trainer and their clients.</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top: 24px; font-size: 0.9rem; color: #666;">Need something bigger or fully custom? Full website builds typically run &pound;1,200&ndash;&pound;4,500+ and apps &pound;500&ndash;&pound;5,000+ depending on scope &mdash; tell us what you need for an exact quote.</p>
+      <p class="reveal" style="margin-top: 12px;"><a href="#platinum" class="option-cta">See our Platinum package &amp; retainer &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- PLATINUM -->
+  <section class="section section-alt" id="platinum">
+    <div class="container">
+      <p class="eyebrow reveal">Full VIP Service</p>
+      <h2 class="section-title reveal">Platinum</h2>
+      <div class="grid" style="grid-template-columns: minmax(0, 480px); justify-content: center; margin-top: 24px;">
+        <article class="card pricing-card pricing-card--featured reveal">
+          <p class="pricing-badge">Full VIP Service</p>
+          <h3 class="pricing-tier">Platinum</h3>
+          <p class="pricing-desc">Full-scope website or app build with ongoing support &mdash; for launches that matter, and the complete VIP treatment throughout.</p>
+          <p class="pricing-price">&pound;3,499<span>starting</span></p>
+          <ul class="pricing-list">
+            <li>Unlimited deliverables (scoped)</li>
+            <li>Unlimited revisions</li>
+            <li>Rush turnaround available</li>
+            <li>30 days post-launch support</li>
+            <li>Dedicated project lead</li>
+            <li>Priority access throughout</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-full">Choose Platinum</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER -->
+  <section class="section">
+    <div class="container">
+      <div class="custom-build-card reveal">
+        <p class="eyebrow">Ongoing Support</p>
+        <h2 class="section-title">Website Retainer</h2>
+        <p class="section-sub">
+          For sites that need continuous attention, not just a one-off build &mdash; ongoing
+          updates, small fixes, monitoring, and priority access whenever something comes up.
+          Predictable monthly cost, cancel anytime.
+        </p>
+        <ul class="detail-list">
+          <li>Set monthly hours of website/app support</li>
+          <li>Priority turnaround over one-off project work</li>
+          <li>Rolls over unused hours one month</li>
+          <li>Month-to-month, no long-term contract</li>
+        </ul>
+        <p class="pricing-price" style="margin-top: 24px;">&pound;450<span>per month, starting</span></p>
+        <a href="quote.html" class="btn btn-primary">Start a Retainer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM WEB APPLICATIONS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="custom-build-card reveal">
+        <p class="eyebrow">Beyond the Tiers</p>
+        <h2 class="section-title">Custom Web Applications</h2>
+        <p class="section-sub">
+          Membership sites, apps with logins and payments, or anything with real backend
+          infrastructure behind it don't fit a flat package &mdash; they're scoped and quoted
+          individually, typically <strong>&pound;2,500&ndash;&pound;15,000+</strong> depending on
+          complexity. This covers things like:
+        </p>
+        <ul class="detail-list">
+          <li>User accounts &amp; secure login</li>
+          <li>Subscription billing &amp; payment processing</li>
+          <li>Custom databases &amp; admin tooling</li>
+          <li>Ongoing infrastructure management</li>
+        </ul>
+        <a href="quote.html" class="btn btn-primary">Get a Custom Quote</a>
       </div>
     </div>
   </section>
@@ -137,6 +316,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -145,5 +325,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

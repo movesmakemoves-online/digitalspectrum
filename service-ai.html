@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="service-ai">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -57,14 +79,61 @@
   <section class="section service-video-section">
     <div class="container">
       <h1 class="section-title reveal service-page-title">AI for Your Business</h1>
-      <div class="video-placeholder reveal">
-        <div class="video-placeholder-inner">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          <p><strong>Video placeholder</strong></p>
-          <p class="video-placeholder-note">
-            A short video explaining this service and how easy it is to get started goes here.
-          </p>
+      <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+        <div>
+          <div class="video-placeholder reveal" style="padding: 0; overflow: hidden;">
+            <video autoplay muted loop playsinline controls style="width: 100%; display: block; border-radius: 8px;">
+              <source src="assets/service-ai-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+        <div style="position: sticky; top: 100px;">
+          <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+          <div style="font-size: 13px; line-height: 1.6;">
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Do I need coding knowledge?</summary>
+              <p style="margin-top: 8px; color: #666;">No. We handle all technical setup. You get simple tools and instructions to use your automation.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">What can AI actually do for my business?</summary>
+              <p style="margin-top: 8px; color: #666;">Answer customer questions 24/7, qualify leads, send emails automatically, organize data, and more. We audit your processes first.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">How much time does it save?</summary>
+              <p style="margin-top: 8px; color: #666;">Most clients save 5-10 hours per week. We calculate ROI during your strategy call.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Is it secure and private?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. We use enterprise-grade tools. Your data stays yours. No third-party training on your info.</p>
+            </details>
+            <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+              <summary style="font-weight: 500; color: #333;">Can you integrate with our existing tools?</summary>
+              <p style="margin-top: 8px; color: #666;">Yes. We connect with Zapier, Make, Airtable, Stripe, email platforms, and most business software.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO COPY -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="reveal" style="max-width: 780px;">
+        <p>
+          AI sounds complicated until you see it actually saving you time &mdash; answering the
+          same customer questions at 11pm, chasing up leads automatically, or pulling admin work
+          off your plate so you can focus on the parts of the business only you can do. We start
+          by looking at what's actually eating your time, then build the automation or chatbot
+          that fixes it.
+        </p>
+        <p>
+          We quote a fixed price after a quick chat about what you need &mdash; audits start from
+          &pound;450, a working chatbot from &pound;999, and a full automated system from
+          &pound;2,500. Half upfront, half once it's built and tested. Nothing goes live until
+          you've seen it working properly.
+        </p>
       </div>
     </div>
   </section>
@@ -74,24 +143,24 @@
     <div class="container">
       <div class="grid grid-3 option-grid">
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">01</span>
           <h2>Start using AI</h2>
           <p>Not sure where AI actually fits in your business? We look at what you do day to day and find the jobs worth automating first.</p>
           <span class="option-cta">Get started &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="contact.html">
+        <a class="card option-card reveal" href="quote.html">
           <span class="option-step">02</span>
           <h2>Improve what you already use</h2>
           <p>Already using AI tools but not getting much back from them? We can tidy up what is there and make it genuinely useful.</p>
           <span class="option-cta">Tell us what you have &rarr;</span>
         </a>
 
-        <a class="card option-card reveal" href="packages.html">
+        <a class="card option-card reveal" href="#platinum">
           <span class="option-step">03</span>
           <h2>See the packages</h2>
-          <p>Basic, Standard and Enhanced tiers, plus a monthly retainer if you would rather spread the work across the year.</p>
+          <p>Our Platinum full-service package, plus a monthly retainer if you would rather spread the work across the year.</p>
           <span class="option-cta">Compare packages &rarr;</span>
         </a>
 
@@ -112,13 +181,93 @@
         </ul>
       </div>
       <div class="info-block reveal">
-        <h2 class="section-title">How getting started works</h2>
+        <h2 class="section-title">How it works</h2>
         <ol class="detail-list detail-list--numbered">
-          <li>Tell us what you need &mdash; a couple of lines is enough to begin with.</li>
-          <li>We come back with a written quote covering what is included, the price and rough timings.</li>
-          <li>Once you are happy, work begins. Projects over &pound;500 start with a 50% deposit.</li>
-          <li>When it is finished it is yours. Keep us on to look after it, or take it and run it yourself.</li>
+          <li>Tell us what's eating your time. &ldquo;I spend hours answering the same questions on Instagram&rdquo; is enough to start with.</li>
+          <li>We look at how you actually work day to day and come back with a written plan &mdash; what we'd automate, what it costs, and the time it should save you.</li>
+          <li>Happy to go ahead? We build it and connect it to the tools you already use.</li>
+          <li>We test it on real questions and real scenarios before it ever talks to a customer.</li>
+          <li>We switch it on and show you (and your team) exactly how it works.</li>
+          <li>It's yours to keep running. We can maintain and improve it, or hand over the keys.</li>
         </ol>
+        <div style="margin-top: 20px; padding: 16px 18px; background: rgba(102, 126, 234, 0.05); border-radius: 8px; font-size: 0.9rem; line-height: 1.6; color: #555;">
+          <strong>For example:</strong> say you run a hair salon and want to stop answering the same booking questions every evening. We'd set up a chatbot that answers opening hours, prices and availability, and books appointments straight into your diary &mdash; tested on real questions before it ever talks to a customer, live within a couple of weeks.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Pricing</h2>
+      <p class="section-sub reveal" style="margin-bottom: 32px;">Starting prices &mdash; every quote is confirmed in writing before work begins.</p>
+      <div class="grid grid-4">
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">AI Audit</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;450</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Automation Setup</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;450+</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Chatbot</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;999</p>
+        </div>
+        <div class="card reveal" style="padding: 20px;">
+          <h3 style="font-size: 1rem; margin: 0 0 6px;">Full System</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 0;">&pound;2,500+</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top: 12px;"><a href="#platinum" class="option-cta">See our Platinum package &amp; retainer &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- PLATINUM -->
+  <section class="section section-alt" id="platinum">
+    <div class="container">
+      <p class="eyebrow reveal">Full VIP Service</p>
+      <h2 class="section-title reveal">Platinum</h2>
+      <div class="grid" style="grid-template-columns: minmax(0, 480px); justify-content: center; margin-top: 24px;">
+        <article class="card pricing-card pricing-card--featured reveal">
+          <p class="pricing-badge">Full VIP Service</p>
+          <h3 class="pricing-tier">Platinum</h3>
+          <p class="pricing-desc">Full-scope AI or automation build with ongoing support &mdash; a complete, white-glove rollout across your business.</p>
+          <p class="pricing-price">&pound;3,999<span>starting</span></p>
+          <ul class="pricing-list">
+            <li>Unlimited deliverables (scoped)</li>
+            <li>Unlimited revisions</li>
+            <li>Rush turnaround available</li>
+            <li>30 days post-launch support</li>
+            <li>Dedicated project lead</li>
+            <li>Priority access throughout</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-full">Choose Platinum</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER -->
+  <section class="section">
+    <div class="container">
+      <div class="custom-build-card reveal">
+        <p class="eyebrow">Ongoing Support</p>
+        <h2 class="section-title">AI Retainer</h2>
+        <p class="section-sub">
+          For businesses that want their automations actively maintained and improved, not just
+          switched on and left &mdash; ongoing tweaks, monitoring, and priority support.
+          Predictable monthly cost, cancel anytime.
+        </p>
+        <ul class="detail-list">
+          <li>Set monthly hours of AI/automation support</li>
+          <li>Priority turnaround over one-off project work</li>
+          <li>Rolls over unused hours one month</li>
+          <li>Month-to-month, no long-term contract</li>
+        </ul>
+        <p class="pricing-price" style="margin-top: 24px;">&pound;450<span>per month, starting</span></p>
+        <a href="quote.html" class="btn btn-primary">Start a Retainer</a>
       </div>
     </div>
   </section>
@@ -136,6 +285,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -144,5 +294,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

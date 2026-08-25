@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Pay — Digital Spectrum Labs</title>
+<meta name="description" content="How payment works at Digital Spectrum Labs — methods we accept, how Stripe invoicing works, timing, and the full process.">
+<link rel="icon" href="assets/dsl-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body[data-page="payments"] {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+
+  .payments-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+    margin-top: 32px;
+  }
+
+  .payments-main h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 16px;
+  }
+
+  .payments-main h2:first-child {
+    margin-top: 0;
+  }
+
+  .faq-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+  }
+
+  .faq-section, .security-section {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+  }
+
+  .faq-section h3, .security-section h3 {
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
+  }
+
+  .faq-section details {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .faq-section summary {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .faq-section details p {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #666;
+  }
+
+  .security-section ul {
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+
+  .security-section li {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .payments-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-sidebar {
+      position: static;
+    }
+  }
+</style>
+</head>
+<body data-page="payments">
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/dsl-mark.svg" alt="" class="brand-logo">
+      <span class="brand-name">Digital <em>Spectrum</em> Labs</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <div class="nav-item has-dropdown">
+        <a href="services.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html">AI for Your Business</a>
+          <a href="service-growth.html">Growth &amp; Marketing</a>
+          <a href="service-video.html">Video Production</a>
+          <a href="service-design.html">Graphic Design</a>
+        </div>
+      </div>
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
+    </nav>
+
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow reveal">Payments</p>
+      <h1 class="section-title reveal">How to Pay</h1>
+      <p class="section-sub reveal" style="max-width: 640px;">
+        Every price on this site is a starting point &mdash; the real cost is always confirmed in
+        writing before anything is invoiced. Here's exactly how paying us works.
+      </p>
+
+      <div class="payments-layout">
+        <div class="payments-main">
+
+          <h2>The Process</h2>
+          <ol class="detail-list detail-list--numbered">
+            <li>You get a written quote first &mdash; nothing is invoiced before you've agreed a price.</li>
+            <li>For most projects, we send a deposit invoice through Stripe: 50% upfront to begin work.</li>
+            <li>We do the work, keeping you updated as it takes shape.</li>
+            <li>Once it's finished and you're happy, we send the final invoice for the remaining balance.</li>
+            <li>Balance paid, the work is fully yours &mdash; source files, access, everything handed over.</li>
+          </ol>
+
+          <h2>How Invoicing Works</h2>
+          <p>
+            For quick, fixed-price items we send a Stripe Payment Link &mdash; click it, pay, and
+            you get an instant receipt by email. For custom or larger projects, we send a proper
+            Stripe invoice for the deposit, and a second invoice for the balance once the work is
+            delivered. Either way, you're never asked to pay before you've seen a written quote.
+          </p>
+
+          <h2>When Payment Is Due</h2>
+          <p>
+            Standard projects run on a 50% deposit upfront, 50% on delivery. For projects over
+            &pound;3,000, we can split payment into installments &mdash; just ask when you get your
+            quote. Monthly retainers are billed at the start of each month. If anything about the
+            scope changes partway through, we'll always agree it with you and adjust the invoice
+            before proceeding &mdash; no surprise costs.
+          </p>
+
+        </div>
+
+        <!-- FAQ + SECURITY -->
+        <div class="faq-sidebar">
+
+          <div class="faq-section reveal">
+            <h3>FAQ</h3>
+
+            <details>
+              <summary>How do you handle scope changes?</summary>
+              <p>We always ask first. If extra work is needed, we create a new invoice and get approval before proceeding. No surprises.</p>
+            </details>
+
+            <details>
+              <summary>Can I pay in installments?</summary>
+              <p>For projects over £3,000, yes. Contact us to discuss payment plan options.</p>
+            </details>
+
+            <details>
+              <summary>How long does payment take?</summary>
+              <p>Less than a minute. Click the payment link, enter your details, and you're done. Instant receipt via email.</p>
+            </details>
+
+            <details>
+              <summary>What's your refund policy?</summary>
+              <p>Quick purchases (under £500): full refund within 30 days if unused. Custom projects: deposits are non-refundable once work begins.</p>
+            </details>
+
+            <details>
+              <summary>How do custom project payments work?</summary>
+              <p>Payment: 50% upfront (deposit), 50% on delivery. We send invoices via Stripe. No surprises, ever.</p>
+            </details>
+          </div>
+
+          <div class="security-section reveal">
+            <h3>Safe, Secure, Trusted</h3>
+
+            <p style="font-size: 13px; font-weight: 600; margin-bottom: 12px;">Payment Methods</p>
+            <ul>
+              <li>Credit &amp; Debit Card (Visa, Mastercard, Amex)</li>
+              <li>Apple Pay</li>
+              <li>Google Pay</li>
+              <li>UK Bank Transfer</li>
+              <li>Link (Saved card)</li>
+            </ul>
+
+            <p style="font-size: 12px; color: #999; margin-top: 12px;">All payments processed securely by Stripe</p>
+
+            <p style="font-size: 13px; font-weight: 600; margin: 16px 0 12px 0;">Why Stripe?</p>
+            <ul>
+              <li>Used by millions of businesses</li>
+              <li>PCI-DSS Level 1 certified</li>
+              <li>Your card details never touch us</li>
+              <li>Automatic receipts &amp; records</li>
+              <li>No monthly fees or hidden costs</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/dsl-mark.svg" alt="" class="brand-logo">
+      <span class="brand-name">Digital <em>Spectrum</em> Labs</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <p class="footer-copy">&copy; <span id="year"></span> Digital Spectrum Labs. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+</style>
 </head>
 <body data-page="services">
 
@@ -40,10 +46,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -53,41 +75,87 @@
 
 <main>
 
-  <!-- WORK SHOWCASE -->
-  <section class="section showcase-section">
+  <!-- VIDEO -->
+  <section class="section service-video-section">
     <div class="container">
-      <div class="showcase">
+      <p class="eyebrow reveal">Our Services</p>
+      <h1 class="section-title reveal service-page-title">One Studio, Every Digital Service You Need</h1>
+      <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+        <div>
+          <div class="video-placeholder reveal" style="padding: 0; overflow: hidden;">
+            <video autoplay muted loop playsinline controls style="width: 100%; display: block; border-radius: 8px;">
+              <source src="assets/services-corporate-promo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div style="position: sticky; top: 100px;">
+        <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #666;">FAQ</h3>
+        <div style="font-size: 13px; line-height: 1.6;">
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">Which service should I start with?</summary>
+            <p style="margin-top: 8px; color: #666;">Most businesses start with a website or brand identity. We'll help you figure out what makes sense for your goals.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">Can I combine services?</summary>
+            <p style="margin-top: 8px; color: #666;">Yes. Many clients bundle services &mdash; tell us what you're building and we'll put together one combined quote.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">How do we get started?</summary>
+            <p style="margin-top: 8px; color: #666;">Book a free 30-minute strategy call. We'll understand your needs and propose the right approach.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">What's the typical timeline?</summary>
+            <p style="margin-top: 8px; color: #666;">Most projects: 2-4 weeks. Custom work varies. We'll give you a realistic schedule upfront.</p>
+          </details>
+          <details style="margin-bottom: 12px; padding: 12px; background: rgba(102, 126, 234, 0.05); border-radius: 6px; cursor: pointer;">
+            <summary style="font-weight: 500; color: #333;">Do you offer retainers?</summary>
+            <p style="margin-top: 8px; color: #666;">Yes. Monthly retainers available for ongoing work, updates, and support across any service.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <a class="showcase-item showcase-item--wide reveal" href="work.html">
-          <video src="assets/work/reel-production-rig.mp4" poster="assets/work/reel-production-rig-poster.webp" autoplay muted loop playsinline></video>
-          <span class="showcase-label">Video Production</span>
-        </a>
-
-        <a class="showcase-item reveal" href="service-design.html">
-          <img src="assets/work/flyer-get-found-online.webp" alt="Flyer design for a small business workshop" loading="lazy">
-          <span class="showcase-label">Graphic Design</span>
-        </a>
-
-        <a class="showcase-item reveal" href="service-ai.html">
-          <img src="assets/work/ai-network.webp" alt="Illustration of connected business tools around a central automation node" loading="lazy">
-          <span class="showcase-label">AI for Business</span>
-        </a>
-
-        <a class="showcase-item showcase-item--tall reveal" href="service-growth.html">
-          <video src="assets/work/reel-team-celebration.mp4" poster="assets/work/reel-team-celebration-poster.webp" autoplay muted loop playsinline></video>
-          <span class="showcase-label">Growth &amp; Marketing</span>
-        </a>
-
-        <a class="showcase-item reveal" href="work.html">
-          <video src="assets/work/reel-conference-stage.mp4" poster="assets/work/reel-conference-stage-poster.webp" autoplay muted loop playsinline></video>
-          <span class="showcase-label">Event Coverage</span>
-        </a>
-
-        <a class="showcase-item showcase-item--wide reveal" href="service-websites.html">
-          <video src="assets/work/reel-abstract-motion.mp4" poster="assets/work/reel-abstract-motion-poster.webp" autoplay muted loop playsinline></video>
-          <span class="showcase-label">Motion &amp; Web</span>
-        </a>
-
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal" style="text-align: center;">How it works, whatever you're building</h2>
+      <p class="section-sub reveal" style="text-align: center; max-width: 620px; margin: 0 auto 40px;">Website, app, video, poster, marketing push, AI assistant &mdash; the process behind it is always the same.</p>
+      <div class="grid grid-3" style="gap: 24px; margin-bottom: 32px;">
+        <div class="card reveal" style="padding: 24px;">
+          <span class="option-step">01</span>
+          <h3 style="font-size: 1.05rem; margin: 8px 0 6px;">Tell us what you're after</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">A couple of lines is enough to begin with &mdash; no jargon, no spec document needed.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <span class="option-step">02</span>
+          <h3 style="font-size: 1.05rem; margin: 8px 0 6px;">We send a written quote</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">What's included, the price, and a realistic timeline. No pressure to say yes.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <span class="option-step">03</span>
+          <h3 style="font-size: 1.05rem; margin: 8px 0 6px;">Work begins</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">Happy to go ahead? Projects over &pound;500 start with a 50% deposit.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <span class="option-step">04</span>
+          <h3 style="font-size: 1.05rem; margin: 8px 0 6px;">We keep you in the loop</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">You'll see progress and can ask for changes &mdash; nothing arrives as a surprise.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <span class="option-step">05</span>
+          <h3 style="font-size: 1.05rem; margin: 8px 0 6px;">We deliver it</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">Tested and finished properly, in whatever format you need it in.</p>
+        </div>
+        <div class="card reveal" style="padding: 24px;">
+          <span class="option-step">06</span>
+          <h3 style="font-size: 1.05rem; margin: 8px 0 6px;">It's yours</h3>
+          <p style="color: var(--text-dim); font-size: 0.92rem; margin: 0;">Keep us on for ongoing support, or take it and run with it yourself.</p>
+        </div>
+      </div>
+      <div class="reveal" style="max-width: 760px; margin: 0 auto; padding: 18px 22px; background: rgba(102, 126, 234, 0.05); border-radius: 8px; font-size: 0.92rem; line-height: 1.6; color: #555;">
+        <strong>For example:</strong> say you run a gym and want an app for members to book classes, or you're launching a poster campaign for a new night out &mdash; the process is the same either way. A quick conversation, a written quote, then we build it together with you kept in the loop from start to finish.
       </div>
     </div>
   </section>
@@ -96,7 +164,7 @@
     <div class="container cta-band-inner reveal">
       <h2 class="section-title">Not sure which service fits?</h2>
       <p class="section-sub">Tell us what you're building and we'll point you to the right package.</p>
-      <a href="contact.html" class="btn btn-primary">Start a Project</a>
+      <a href="quote.html" class="btn btn-primary">Start a Project</a>
     </div>
   </section>
 
@@ -113,6 +181,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -121,5 +190,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

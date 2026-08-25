@@ -10,6 +10,186 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+  body[data-page="work"] {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  }
+
+  .work-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .work-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .work-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+  }
+
+  .work-card-image {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .work-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .work-card:hover .work-card-image img {
+    transform: scale(1.05);
+  }
+
+  .work-card-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .work-card:hover .work-card-slideshow {
+    opacity: 1;
+  }
+
+  .slideshow-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+
+  .work-card-content {
+    padding: 24px;
+  }
+
+  .work-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .work-card-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  .work-card-list {
+    font-size: 13px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .work-card-list li {
+    margin-bottom: 8px;
+    color: #666;
+  }
+
+  .work-status {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+  }
+
+  .quick-turnaround {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .quick-turnaround p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .quick-turnaround-sub {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-top: 4px;
+  }
+
+  .work-faq {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+  }
+
+  .work-faq h3 {
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
+  }
+
+  .work-faq details {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .work-faq summary {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .work-faq details p {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #666;
+  }
+
+  @media (max-width: 1024px) {
+    .work-section {
+      grid-template-columns: 1fr;
+    }
+
+    .work-faq {
+      position: static;
+    }
+
+    .work-cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 <body data-page="work">
 
@@ -40,10 +220,26 @@
       </div>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html#contact-details" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="nav-item has-dropdown">
+        <a href="pricing.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Pricing
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html#pricing">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html#pricing">AI Automation</a>
+          <a href="service-growth.html#pricing">Growth &amp; Marketing</a>
+          <a href="service-video.html#pricing">Video Production</a>
+          <a href="service-design.html#pricing">Graphic Design</a>
+          <a href="quote.html">Custom Projects</a>
+          <a href="pricing.html">View All Prices</a>
+        </div>
+      </div>
+      <a href="payments.html" class="nav-link">How to Pay</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
+    <a href="quote.html" class="btn btn-primary btn-small header-cta">Get a Quote</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -56,183 +252,184 @@
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow reveal">Recent Work</p>
-      <h1 class="section-title reveal">A Look At The Studio</h1>
+      <h1 class="section-title reveal">Ideas Brought to Life</h1>
       <p class="section-sub reveal">
-        Real projects currently in build, plus the full range of work we cover — reach out
+        Real projects currently in build, plus the full range of work we cover &mdash; get in touch
         and we'll walk you through more samples directly.
       </p>
     </div>
   </section>
 
-  <!-- WORK MOSAIC -->
+  <!-- WORK CARDS SECTION (NOW AT TOP) -->
+  <section class="section">
+    <div class="container">
+      <div class="work-section">
+        <!-- CARDS COLUMN -->
+        <div>
+          <div class="work-cards-grid">
+
+            <!-- IZMWEAR CARD -->
+            <article class="work-card reveal">
+              <div class="work-card-image">
+                <img src="assets/work/izmwear-home.png" alt="Izmwear homepage" loading="lazy">
+                <div class="work-card-slideshow">
+                  <img class="slideshow-img" src="assets/work/izmwear-home.png" alt="Homepage">
+                  <img class="slideshow-img" src="assets/work/izmwear-shop-all.png" alt="Collections">
+                  <img class="slideshow-img" src="assets/work/izmwear-mens.png" alt="Men's Category">
+                  <img class="slideshow-img" src="assets/work/izmwear-womens.png" alt="Women's Category">
+                  <img class="slideshow-img" src="assets/work/izmwear-tshirts.png" alt="T-shirts">
+                  <img class="slideshow-img" src="assets/work/izmwear-hoodies.png" alt="Hoodies">
+                  <img class="slideshow-img" src="assets/work/izmwear-contact.png" alt="Contact">
+                  <img class="slideshow-img" src="assets/work/izmwear-returns.png" alt="Returns">
+                </div>
+              </div>
+              <div class="work-card-content">
+                <h3>Izm Wear</h3>
+                <p class="work-card-desc">Streetwear e-commerce store with custom design across every page.</p>
+                <ul class="work-card-list">
+                  <li>✓ Shopify store design</li>
+                  <li>✓ Collections &amp; filters</li>
+                  <li>✓ Product showcase</li>
+                  <li>✓ Brand system</li>
+                </ul>
+                <p class="work-status">Live — Hover to see pages</p>
+              </div>
+            </article>
+
+            <!-- HAND MADE BY YOU CARD -->
+            <article class="work-card reveal">
+              <div class="work-card-image" style="background: #ffffff;">
+                <img src="assets/placeholder-hmby.png" alt="Hand Made By You membership site" loading="lazy" style="display:none;">
+                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #333; font-size: 24px;">🧵 Hand Made By You</div>
+              </div>
+              <div class="work-card-content">
+                <h3>Hand Made By You</h3>
+                <p class="work-card-desc">Membership site for hand sewing &amp; knitting lessons, all skill levels.</p>
+                <ul class="work-card-list">
+                  <li>✓ Custom-built membership</li>
+                  <li>✓ Secure login &amp; accounts</li>
+                  <li>✓ Subscription billing</li>
+                  <li>✓ Lesson library</li>
+                </ul>
+                <p class="work-status">In development — Pre-launch</p>
+              </div>
+            </article>
+
+            <!-- LITTLE VIPS CARD -->
+            <article class="work-card reveal">
+              <div class="work-card-image" style="background: #ffffff;">
+                <img src="assets/placeholder-vips.png" alt="Little VIPs booking platform" loading="lazy" style="display:none;">
+                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #333; font-size: 24px;">👶 Little VIPs</div>
+              </div>
+              <div class="work-card-content">
+                <h3>Little VIPs</h3>
+                <p class="work-card-desc">Premium event &amp; childcare booking platform for the London market.</p>
+                <ul class="work-card-list">
+                  <li>✓ Luxury booking system</li>
+                  <li>✓ Multi-step checkout</li>
+                  <li>✓ Admin dashboard</li>
+                  <li>✓ Black &amp; gold brand</li>
+                </ul>
+                <p class="work-status">In development — Pre-launch</p>
+              </div>
+            </article>
+
+            <!-- PORTFOLIO CARD -->
+            <article class="work-card reveal">
+              <div class="work-card-image" style="background: #ffffff;">
+                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #333; font-size: 24px;">🎬 More Work</div>
+              </div>
+              <div class="work-card-content">
+                <h3>Full Portfolio</h3>
+                <p class="work-card-desc">Music videos, brand campaigns, design systems, and beyond.</p>
+                <ul class="work-card-list">
+                  <li>✓ Music videos &amp; promos</li>
+                  <li>✓ Brand campaigns</li>
+                  <li>✓ Design systems</li>
+                  <li>✓ Custom solutions</li>
+                </ul>
+                <p class="work-status">Available on request</p>
+                <a href="contact.html" class="btn btn-primary btn-small" style="text-decoration: none; margin-top: 12px; display: inline-block;">View More</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- FAQ SIDEBAR -->
+        <div class="work-faq reveal">
+          <h3>FAQ</h3>
+
+          <details>
+            <summary>How long does a project take?</summary>
+            <p>Most projects deliver in 5–10 days. Custom builds (websites, apps) take 2–8 weeks depending on scope. We give you a timeline with every quote.</p>
+          </details>
+
+          <details>
+            <summary>Do you show work in progress?</summary>
+            <p>Yes. You get updates throughout, with drafts to review. We want feedback early and often — it makes the final result better.</p>
+          </details>
+
+          <details>
+            <summary>Can I see more samples?</summary>
+            <p>Absolutely. We have a full portfolio covering music videos, brand campaigns, design systems, and more. Get in touch and we'll show you work in your space.</p>
+          </details>
+
+          <details>
+            <summary>What if I need changes after launch?</summary>
+            <p>We include revisions in every package, and monthly maintenance adds ongoing support. You own the work — we're here if you need us.</p>
+          </details>
+
+          <details>
+            <summary>Can you handle retainers?</summary>
+            <p>Yes. We offer Light (£450/month), Standard (£850/month), and Full (£1,600/month) retainers. Mix any service, flexible hours, priority support included.</p>
+          </details>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK MOSAIC (MOVED DOWN) -->
   <section class="section showcase-section">
     <div class="container">
-      <div class="showcase">
+      <p class="eyebrow reveal">Services</p>
+      <h2 class="section-title reveal">What We Cover</h2>
 
-        <a class="showcase-item showcase-item--wide reveal" href="service-video.html">
+      <div class="showcase reveal" style="margin-top: 40px;">
+
+        <a class="showcase-item showcase-item--wide" href="service-video.html">
           <video src="assets/work/reel-production-rig.mp4" poster="assets/work/reel-production-rig-poster.webp" autoplay muted loop playsinline></video>
           <span class="showcase-label">Video Production</span>
         </a>
 
-        <a class="showcase-item reveal" href="service-design.html">
+        <a class="showcase-item" href="service-design.html">
           <img src="assets/work/flyer-get-found-online.webp" alt="Flyer design for a small business workshop" loading="lazy">
           <span class="showcase-label">Graphic Design</span>
         </a>
 
-        <a class="showcase-item reveal" href="service-ai.html">
+        <a class="showcase-item" href="service-ai.html">
           <img src="assets/work/ai-network.webp" alt="Illustration of connected business tools around a central automation node" loading="lazy">
           <span class="showcase-label">AI for Business</span>
         </a>
 
-        <a class="showcase-item showcase-item--tall reveal" href="service-growth.html">
+        <a class="showcase-item showcase-item--tall" href="service-growth.html">
           <video src="assets/work/reel-team-celebration.mp4" poster="assets/work/reel-team-celebration-poster.webp" autoplay muted loop playsinline></video>
           <span class="showcase-label">Growth &amp; Marketing</span>
         </a>
 
-        <a class="showcase-item reveal" href="service-video.html">
+        <a class="showcase-item" href="service-video.html">
           <video src="assets/work/reel-conference-stage.mp4" poster="assets/work/reel-conference-stage-poster.webp" autoplay muted loop playsinline></video>
           <span class="showcase-label">Event Coverage</span>
         </a>
 
-        <a class="showcase-item showcase-item--wide reveal" href="service-websites.html">
+        <a class="showcase-item showcase-item--wide" href="service-websites.html">
           <video src="assets/work/reel-abstract-motion.mp4" poster="assets/work/reel-abstract-motion-poster.webp" autoplay muted loop playsinline></video>
           <span class="showcase-label">Motion &amp; Web</span>
         </a>
 
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="grid grid-3 pricing-grid" style="margin-bottom: 60px;">
-
-        <article class="card pricing-card pricing-card--showcase reveal" id="izmwear-card">
-          <h3 class="pricing-tier">Izm Wear</h3>
-          <p class="pricing-desc">A streetwear brand e-commerce site. Custom design for every page layout.</p>
-          <div class="izmwear-showcase">
-            <a href="https://izmwear.store" target="_blank" rel="noopener" class="izmwear-link">
-              <img src="assets/work/izmwear-home.png" alt="Izmwear homepage" loading="lazy">
-            </a>
-            <div class="izmwear-slideshow">
-              <div class="slideshow-container">
-                <img class="slide" src="assets/work/izmwear-home.png" alt="Homepage">
-                <img class="slide" src="assets/work/izmwear-shop-all.png" alt="Collections">
-                <img class="slide" src="assets/work/izmwear-mens.png" alt="Men's Category">
-                <img class="slide" src="assets/work/izmwear-womens.png" alt="Women's Category">
-                <img class="slide" src="assets/work/izmwear-tshirts.png" alt="T-shirts">
-                <img class="slide" src="assets/work/izmwear-hoodies.png" alt="Hoodies">
-                <img class="slide" src="assets/work/izmwear-contact.png" alt="Contact">
-                <img class="slide" src="assets/work/izmwear-returns.png" alt="Returns">
-              </div>
-            </div>
-          </div>
-          <ul class="pricing-list">
-            <li>Shopify store design &amp; brand system</li>
-            <li>Men's &amp; women's collection pages with filters</li>
-            <li>Product showcase &amp; hero imaging</li>
-            <li>Contact, returns policy, brand voice throughout</li>
-          </ul>
-          <p class="work-status">Live — active store · Hover to see pages</p>
-        </article>
-
-        <article class="card pricing-card reveal">
-          <h3 class="pricing-tier">Hand Made By You</h3>
-          <p class="pricing-desc">A membership site teaching hand sewing &amp; knitting, all skill levels.</p>
-          <ul class="pricing-list">
-            <li>Custom-built site with full brand &amp; design system</li>
-            <li>Member accounts &amp; secure login</li>
-            <li>Two-tier subscription billing, monthly &amp; annual</li>
-            <li>Published lesson library with written guides</li>
-          </ul>
-          <p class="work-status">In development — pre-launch</p>
-        </article>
-
-        <article class="card pricing-card reveal">
-          <h3 class="pricing-tier">Little VIPs</h3>
-          <p class="pricing-desc">A premium event &amp; travel childcare booking platform, London.</p>
-          <ul class="pricing-list">
-            <li>Custom-built site with a luxury black &amp; gold brand</li>
-            <li>Multi-step booking flow, dates to venue to review</li>
-            <li>Live price estimation as you book</li>
-            <li>Full business plan &amp; market research delivered alongside</li>
-          </ul>
-          <p class="work-status">In development — pre-launch</p>
-        </article>
-
-      </div>
-
-      <h2 class="section-title reveal" style="font-size: 1.4rem; margin-bottom: 8px;">More Work</h2>
-      <p class="section-sub reveal" style="margin-bottom: 28px;">
-        Concept work created in-house to show range and style — not client commissions.
-        Client projects are shown above.
-      </p>
-
-      <div class="grid grid-3 sample-grid">
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/cover-gathering-tide.webp" alt="Album cover concept: hand-drawn teal circle on cream, titled The Gathering Tide" loading="lazy">
-          <figcaption><span class="work-tag">Cover Art</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/cover-tribal-house.webp" alt="Album cover concept: coloured light beams radiating across a dark background" loading="lazy">
-          <figcaption><span class="work-tag">Cover Art</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/cover-light-beam.webp" alt="Single cover concept: teal and amber light streak across a dark textured background" loading="lazy">
-          <figcaption><span class="work-tag">Cover Art</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/video-urban-night-shoot.webp" alt="Film still: night-time music video shoot on a city street with crew, lighting and crane" loading="lazy">
-          <figcaption><span class="work-tag">Video Production</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/video-crew-window.webp" alt="Film still: crew filming a silhouetted figure at a window at sunset" loading="lazy">
-          <figcaption><span class="work-tag">Video Production</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/video-still-window.webp" alt="Cinematic still: silhouetted figure looking out over a city skyline at golden hour" loading="lazy">
-          <figcaption><span class="work-tag">Colour Grading</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/video-edit-timeline.webp" alt="Flat illustration of a video editing timeline in teal, amber and charcoal" loading="lazy">
-          <figcaption><span class="work-tag">Editing</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <img src="assets/work/ai-network.webp" alt="Illustration of connected business tools around a glowing central automation node" loading="lazy">
-          <figcaption><span class="work-tag">AI for Business</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <video src="assets/work/reel-abstract-motion.mp4" poster="assets/work/reel-abstract-motion-poster.webp"
-                 autoplay muted loop playsinline preload="none"
-                 aria-label="Abstract motion graphic: geometric shapes moving across a cream background"></video>
-          <figcaption><span class="work-tag">Motion Graphics</span></figcaption>
-        </figure>
-
-        <figure class="sample-tile reveal">
-          <video src="assets/work/reel-production-rig.mp4" poster="assets/work/reel-production-rig-poster.webp"
-                 autoplay muted loop playsinline preload="none"
-                 aria-label="Camera on a gimbal rig moving through an event space"></video>
-          <figcaption><span class="work-tag">Event Filming</span></figcaption>
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band section-alt">
-    <div class="container cta-band-inner reveal">
-      <h2 class="section-title">Want to see samples for your kind of project?</h2>
-      <p class="section-sub">Message us what you're after and we'll send relevant work directly.</p>
-      <a href="contact.html" class="btn btn-primary">Ask For Samples</a>
     </div>
   </section>
 
@@ -249,6 +446,7 @@
       <a href="work.html">Work</a>
       <a href="about.html">About</a>
       <a href="contact.html#contact-details">Contact</a>
+      <a href="payments.html">How to Pay</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
@@ -257,5 +455,36 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/chatbot-data.js"></script>
+<script src="js/chatbot.js"></script>
+<script>
+  // Slideshow effect for work cards
+  const cards = document.querySelectorAll('.work-card');
+
+  cards.forEach(card => {
+    const slideshow = card.querySelector('.work-card-slideshow');
+    if (!slideshow) return;
+
+    const slides = slideshow.querySelectorAll('.slideshow-img');
+    let currentSlide = 0;
+
+    card.addEventListener('mouseenter', () => {
+      if (slides.length === 0) return;
+      const interval = setInterval(() => {
+        slides.forEach(slide => slide.style.display = 'none');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].style.display = 'block';
+      }, 1500);
+
+      card.addEventListener('mouseleave', () => {
+        clearInterval(interval);
+        slides.forEach(slide => slide.style.display = 'none');
+      }, { once: true });
+    });
+  });
+
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
