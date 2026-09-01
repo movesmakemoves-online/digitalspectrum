@@ -1,0 +1,7 @@
+{
+  "receivedAt": "2026-09-01T15:49:28.451Z",
+  "from": "movesmakemoves@gmail.com",
+  "to": "services@digitalspectrumlabs.co.uk",
+  "subject": "Test enquiry — email routing check",
+  "body": "This is a test message sent by Claude to confirm the dsl-lead-router Worker\nforwards mail correctly and logs it to leads/inbox/ in the GitHub repo.\nSent 2026-09-01 as part of an email-worker verification.\n\n"
+}
