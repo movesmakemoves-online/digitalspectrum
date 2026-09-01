@@ -6,7 +6,8 @@ down — written down so it's a real policy, not just "it's probably fine."
 ## What's already covered
 
 **Website code and content** — the entire site lives in a Git repository, pushed to GitHub
-(`github.com/movesmakemoves-online/Izm-Studio` — pending rename to match the brand). Every
+(`github.com/movesmakemoves-online/digitalspectrum` — renamed from `Izm-Studio` on 2026-09-01
+to match the brand). Every
 change is versioned, so any file can be restored to any previous state via git history. This
 is a genuine, working backup as long as changes are actually committed and pushed regularly
 — which, as of 2026-08-30, is now up to date.

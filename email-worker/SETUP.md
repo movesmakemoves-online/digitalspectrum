@@ -56,8 +56,9 @@ GitHub log stops working, since that's the more critical of the two paths.
 - **Change where it forwards to:** edit `FORWARD_TO` in `wrangler.toml`, then
   `npx wrangler deploy`
 - **Change which GitHub repo it logs to:** edit `GITHUB_OWNER` / `GITHUB_REPO` in
-  `wrangler.toml` — **this needs updating once the GitHub repo is renamed** from `Izm-Studio` to
-  match the brand, or lead logging will silently break
+  `wrangler.toml`, then `npx wrangler deploy`. **Already done** — the repo was renamed
+  `Izm-Studio` → `digitalspectrum` on 2026-09-01, `wrangler.toml` and the deployed Worker were
+  updated to match the same day, and a real end-to-end test confirmed logging still works
 - **Rotate the GitHub token:** generate a new fine-grained token (Contents: Read and write,
   scoped to this one repo only), then `npx wrangler secret put GITHUB_TOKEN`
 

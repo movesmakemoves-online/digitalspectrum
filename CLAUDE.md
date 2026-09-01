@@ -37,7 +37,8 @@ blocked from browser automation; any Stripe-side clicking is the user's, not Cla
 
 ## Full reference
 
-`LAUNCH-CHECKLIST.md` and `PLAN-CHECKLIST.md` in this folder for current build status —
-read those directly, they change fast and this file won't be kept in sync with them.
+`LAUNCH-CHECKLIST.md` in this folder for current build status — read it directly, it changes
+fast and this file won't be kept in sync with it. (`PLAN-CHECKLIST.md` was deleted 2026-09-01 —
+superseded by the "Six Months, Resumed" artifact.)
 `guides/digitalspectrumlabsservices.md` and `guides/SOPdigitalspectrumlabs.md` (at the project
 root) for services, pricing and operating procedures.

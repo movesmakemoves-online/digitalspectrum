@@ -15,7 +15,9 @@ version. **This must be committed and pushed before any other launch step matter
 - [x] New brand: name, logo (prism/spectrum mark), full site rename
 - [x] Growth & Marketing added as a 5th service line (SEO, email marketing, social retainers, CRM setup)
 - [x] Services reordered site-wide: Websites/Apps/Games, AI for Business, Growth & Marketing, Video Production (renamed from Music Video & Film Editing), Graphic Design
-- [x] Committed to git, pushed to GitHub (currently under repo name "Izm-Studio" — needs renaming to match) — **note: this refers to the pre-2026-08-19 history; everything since is unpushed, see blocker above**
+- [x] Committed to git, pushed to GitHub. Repo renamed `Izm-Studio` → `digitalspectrum` on
+  2026-09-01 — local remote, `wrangler.toml`, and the deployed Worker all updated the same day,
+  verified with a real end-to-end lead test after the redeploy
 - [x] Deployed to Vercel (currently on a "Pro Trial" — needs migrating to Netlify instead, since Vercel's free tier bans commercial use and Netlify's allows it)
 - [x] **Fixed a real bug (2026-08-04): the contact form had no code behind it at all** — "Send Request" did nothing. Now wired as a Netlify Form (works automatically once deployed on Netlify, zero backend needed) with a JS fallback message if it ever fails. Also fixed the visible contact email, which pointed at hello@digitalspectrumlabs.com — a mailbox that doesn't exist yet since the domain isn't purchased — now points at movesmakemoves@gmail.com until real business email exists.
 - [x] **Deployed to Netlify (2026-08-04)** — live at digitalspectrum.netlify.app, deploying from the GitHub repo. Made public (was gated behind Netlify's team-login wall at first). Form notifications wired to movesmakemoves@gmail.com and verified end-to-end with a real test submission — email arrived. The contact form is fully functional in production, not just in theory.
@@ -56,12 +58,11 @@ version. **This must be committed and pushed before any other launch step matter
    management → add `digitalspectrumlabs.co.uk`), and send one real test email to
    `support@digitalspectrumlabs.co.uk` (or `services@`) to confirm the whole chain works
    end to end now that routing is actually live.
-8. **Rename the GitHub repo** — go to github.com/movesmakemoves-online/Izm-Studio/settings,
-   change the repo name field to `Digital-Spectrum-Labs`, click Rename. (Netlify's deploy
-   source will need repointing to the new repo URL after — check Netlify still builds
-   correctly once this is done, GitHub renames usually auto-redirect but worth confirming.)
-   Also update `GITHUB_REPO` in `email-worker/wrangler.toml` and redeploy the Worker after,
-   or the lead logging will break.
+8. ~~Rename the GitHub repo~~ — **done 2026-09-01**: renamed `Izm-Studio` → `digitalspectrum`.
+   Local git remote, `email-worker/wrangler.toml` (`GITHUB_REPO`), and the deployed
+   `dsl-lead-router` Worker were all updated the same day and the Worker was redeployed.
+   Verified with a real end-to-end test email — new lead logged correctly under the new repo
+   name.
 9. ~~Move hosting from Vercel to Netlify~~ — **done 2026-08-04**, see above.
 
 ### Legal — required before promoting to customers

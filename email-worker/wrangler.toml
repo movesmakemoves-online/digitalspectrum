@@ -4,9 +4,11 @@ compatibility_date = "2026-08-01"
 
 [vars]
 # GitHub repo this worker logs new leads into (as leads/inbox/<timestamp>.json).
-# Update GITHUB_REPO once the repo rename (Izm-Studio -> Digital-Spectrum-Labs) is done.
+# Renamed 2026-09-01: Izm-Studio -> digitalspectrum. Old name still resolves via GitHub's
+# redirect, but the redirect isn't guaranteed for the PUT requests this worker makes, so this
+# is kept pointed at the real current name rather than relying on it.
 GITHUB_OWNER = "movesmakemoves-online"
-GITHUB_REPO = "Izm-Studio"
+GITHUB_REPO = "digitalspectrum"
 
 # Every incoming lead email is forwarded here first, no matter what — this address must be
 # a verified destination address in Cloudflare Email Routing before deploying.
