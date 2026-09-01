@@ -1,0 +1,15 @@
+{
+  "source": "chatbot",
+  "receivedAt": "2026-09-01T20:05:57.993Z",
+  "requestType": "quote",
+  "name": "Test Chatbot Lead",
+  "email": "test@example.com",
+  "business": "Test Co",
+  "goal": "Verify the new GitHub-log backup path",
+  "hasWebsite": "",
+  "hasSocial": "",
+  "sellsOnline": "",
+  "recommendedServices": "",
+  "message": "",
+  "page": "index.html"
+}
