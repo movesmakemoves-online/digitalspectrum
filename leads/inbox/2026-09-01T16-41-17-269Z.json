@@ -1,0 +1,7 @@
+{
+  "receivedAt": "2026-09-01T16:41:17.269Z",
+  "from": "movesmakemoves@gmail.com",
+  "to": "support@digitalspectrumlabs.co.uk",
+  "subject": "Test 4 — post repo-rename check",
+  "body": "Confirming lead logging still works after renaming the repo and redeploying\nthe Worker with the new GITHUB_REPO value.\n\n"
+}
