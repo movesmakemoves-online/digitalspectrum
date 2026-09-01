@@ -1,0 +1,7 @@
+{
+  "receivedAt": "2026-09-01T15:56:27.816Z",
+  "from": "movesmakemoves@gmail.com",
+  "to": "support@digitalspectrumlabs.co.uk",
+  "subject": "Test 3 — json tail",
+  "body": "Third test, checking structured JSON tail output for console.error details\non the forward step.\n\n"
+}
