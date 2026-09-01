@@ -6,12 +6,31 @@ type and address type, because UK PECR only allows cold email to corporate subsc
 partnerships and any freemail address need prior consent — for those, use their own
 website form, LinkedIn, post, or phone after a TPS **and** CTPS screen.
 
-**Nothing here has been contacted. Every message is drafted and gated on the owner's approval.**
-
 Service landing pages (live at `digitalspectrumlabs.co.uk` — confirmed resolving 2026-09-01,
 was still on `digitalspectrum.netlify.app` only as of 2026-08-14):
 websites `service-websites.html` · AI `service-ai.html` · growth `service-growth.html` ·
 video `service-video.html` · design `service-design.html`
+
+## Stage tracker
+
+Added 2026-09-01, after the outreach rhythm stalled with no record of what happened to 3 of 4
+warm approaches — a lead going quiet unmarked is exactly what this table exists to prevent.
+**Stages: Researched → Approached → Conversation → Quoted → Won / Lost.** Update the stage the
+moment it changes; don't let an entry go silent between updates the way the warm ones did.
+
+| Prospect | Route | Stage | Last update |
+|---|---|---|---|
+| Mr Snappy's Custom Caps | Warm network | **Conversation** — mockups produced and shown | 2026-08-25ish (exact date not on record) |
+| 3 other warm-network approaches | Warm network | **Lost — went cold**, not individually named in any file this tracker can check | see note below |
+| Alliance of Independent Promoters (AIP) | Cold, researched | **Researched** — not yet approached | 2026-08-14 |
+| DeepMatter Records | Cold, researched | **Researched** — not yet approached | 2026-08-14 |
+| Ground Rules Festival | Cold, researched | **Researched** — not yet approached, entity unconfirmed | 2026-08-14 |
+
+**The 3 unnamed warm approaches**: the six-month plan artifact records that "three of four warm
+approaches went cold" but never named who they were — that detail exists only in your head, not
+in any file. If you want them tracked properly (and know whether a conversation happened before
+they went quiet), tell me the names and stages and this table gets corrected. Until then this
+row stays honest about being incomplete rather than guessing.
 
 ---
 

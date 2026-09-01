@@ -568,9 +568,22 @@
     }).catch(() => { /* best-effort — chat confirmation already shown regardless */ });
   }
 
+  // Redundant backup copy to the same Worker that logs email leads to GitHub, so a chat-widget
+  // quote request survives even if Netlify's own Forms dashboard is never checked. Best-effort —
+  // the chat confirmation is already shown regardless of whether this succeeds.
+  const LEAD_BACKUP_URL = 'https://dsl-lead-router.movesmakemoves.workers.dev/chatbot-lead';
+
+  function backupLeadToGitHub(requestType, data) {
+    fetch(LEAD_BACKUP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.assign({ request_type: requestType }, data)),
+    }).catch(() => {});
+  }
+
   function submitLead(requestType) {
     const a = state.answers;
-    netlifySubmit('chatbot-lead', {
+    const data = {
       request_type: requestType,
       name: a.name || '',
       email: a.email || '',
@@ -583,7 +596,9 @@
       message: a.message || a.humanNote || '',
       page: PAGE,
       timestamp: new Date().toISOString(),
-    });
+    };
+    netlifySubmit('chatbot-lead', data);
+    backupLeadToGitHub(requestType, data);
   }
 
   function logQuery(text, matched) {
