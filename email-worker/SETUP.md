@@ -1,85 +1,74 @@
-# Lead Router — Setup Walkthrough
+# Lead Router — Setup Reference
 
-What this does: any email sent to `leads@digitalspectrumlabs.com` gets (1) forwarded straight
-to your Gmail immediately, no matter what, and (2) logged as a file in the GitHub repo so
-Claude can see new leads without needing access to your inbox. Free — the only cost in this
-whole checklist is the domain itself, which you're buying anyway.
+What this does: any email sent to `support@digitalspectrumlabs.co.uk` or
+`services@digitalspectrumlabs.co.uk` gets (1) forwarded to Gmail immediately, no matter what, and
+(2) logged as a file in the GitHub repo (`leads/inbox/`) so Claude can see new leads without
+needing access to the inbox. Free — the only cost is the domain, which is already bought.
 
-Do these in order. Each step says which account it needs.
+**This is already built and deployed.** This doc is a reference for how it works and how to
+change it, not a first-time setup walkthrough — that's done.
 
-## 1. Buy the domain (if not already done)
-digitalspectrumlabs.com or .co.uk — via Cloudflare Registrar is easiest since you're about to
-put it on Cloudflare anyway (no markup, sold at cost). Otherwise any registrar works, you'll
-just point its nameservers at Cloudflare in the next step.
+## Current live configuration (verified 2026-09-01)
 
-## 2. Add the domain to Cloudflare (free plan)
-dash.cloudflare.com → Add a site → enter the domain → pick Free plan → Cloudflare gives you
-two nameservers → set those at your registrar (skip this if you bought the domain through
-Cloudflare directly, it's automatic).
+- **Domain:** `digitalspectrumlabs.co.uk`, on Cloudflare, DNS + Email Routing both live
+- **Addresses routed to the Worker:** `support@digitalspectrumlabs.co.uk` and
+  `services@digitalspectrumlabs.co.uk` — both rules enabled, confirmed via
+  `wrangler email routing rules list digitalspectrumlabs.co.uk`
+- **Destination address:** `movesmakemoves@gmail.com`, verified in Cloudflare since 2026-08-05
+- **Worker:** `dsl-lead-router`, deployed, receives mail cleanly (`outcome: ok`, no exceptions)
+- **GitHub logging:** confirmed working — every test email has logged to `leads/inbox/` within
+  seconds, correct sender/recipient/subject/body captured every time
 
-## 3. Turn on Email Routing and verify your Gmail as a destination
-Cloudflare dashboard → your domain → **Email** → Email Routing → Enable.
-Add `movesmakemoves@gmail.com` as a destination address → Cloudflare emails you a
-confirmation link → click it. This step is required before the Worker can forward anything
-there.
+## Known open question (as of 2026-09-01)
 
-## 4. Create a GitHub token scoped to just this one repo
-github.com → click your profile photo → Settings → Developer settings → Personal access
-tokens → **Fine-grained tokens** → Generate new token.
-- Repository access: **Only select repositories** → pick the Digital Spectrum Labs repo
-  (currently named `Izm-Studio`, may be renamed by the time you do this)
+Three test emails sent **from `movesmakemoves@gmail.com` itself** did not arrive back in Gmail as
+forwarded copies, despite the Worker reporting success with no errors. This is most likely a
+Gmail-side deliverability quirk specific to self-addressed test emails (a message claiming to be
+"from" `@gmail.com`, arriving via a non-Google relay, commonly fails spoofing checks) — **not**
+necessarily a sign the forward is broken for real enquiries from other domains. Needs one real
+test from a non-Gmail address to confirm either way. Until confirmed, treat the GitHub log
+(`leads/inbox/`) as the reliable source for whether a lead came in, not the Gmail forward alone.
+
+## How to check it's working
+
+```bash
+cd email-worker
+npx wrangler whoami                                          # confirm you're logged in
+npx wrangler email routing addresses list                    # check destination is verified
+npx wrangler email routing rules list digitalspectrumlabs.co.uk   # check routing rules
+npx wrangler tail dsl-lead-router --format json               # watch live traffic
+```
+
+Send a real test email (ideally from a non-Gmail address) to `support@` or `services@`, then
+check:
+- **Gmail** — the forwarded copy should arrive within a minute or two
+- **The GitHub repo** — a new file should appear under `leads/inbox/`
+
+If GitHub logging works but the Gmail forward doesn't, the lead is not lost — it's sitting in
+`leads/inbox/` regardless. Check Worker logs (`npx wrangler tail`) for the specific error if the
+GitHub log stops working, since that's the more critical of the two paths.
+
+## How to change things
+
+- **Add another routed address** (e.g. a new `hello@`):
+  `npx wrangler email routing rules create digitalspectrumlabs.co.uk` (or via the Cloudflare
+  dashboard → Email → Email Routing → Routing rules → Create address)
+- **Change where it forwards to:** edit `FORWARD_TO` in `wrangler.toml`, then
+  `npx wrangler deploy`
+- **Change which GitHub repo it logs to:** edit `GITHUB_OWNER` / `GITHUB_REPO` in
+  `wrangler.toml` — **this needs updating once the GitHub repo is renamed** from `Izm-Studio` to
+  match the brand, or lead logging will silently break
+- **Rotate the GitHub token:** generate a new fine-grained token (Contents: Read and write,
+  scoped to this one repo only), then `npx wrangler secret put GITHUB_TOKEN`
+
+## The GitHub token, if it ever needs recreating
+
+github.com → profile photo → Settings → Developer settings → Personal access tokens →
+Fine-grained tokens → Generate new token.
+- Repository access: **Only select repositories** → the Digital Spectrum Labs repo
 - Permissions → Contents → **Read and write**
-- Generate, then copy the token somewhere safe — GitHub only shows it once. It starts with
-  `github_pat_`.
+- Copy the token immediately — GitHub only shows it once, starts with `github_pat_`
+- Set it: `npx wrangler secret put GITHUB_TOKEN` (paste when prompted — this keeps it out of
+  git entirely, it lives only in Cloudflare)
 
-This token can only touch that one repo, nothing else in your GitHub account.
-
-## 5. Install the tools and log in
-Open a terminal in this folder (`email-worker`) and run:
-```bash
-npm init -y
-npm install postal-mime
-npm install -D wrangler
-npx wrangler login
-```
-The last command opens a browser tab asking you to authorize Wrangler against your
-Cloudflare account — approve it.
-
-## 6. Set the GitHub token as a secret
-```bash
-npx wrangler secret put GITHUB_TOKEN
-```
-Paste the token from step 4 when it asks, then press Enter. This keeps it out of the code
-and out of git — it lives only in Cloudflare.
-
-## 7. Check `wrangler.toml`
-Open `wrangler.toml` in this folder. Make sure `GITHUB_REPO` matches the actual current repo
-name (update it if the Izm-Studio → Digital-Spectrum-Labs rename has happened by now).
-
-## 8. Deploy
-```bash
-npx wrangler deploy
-```
-This uploads the Worker to Cloudflare. It won't receive any email yet — one more step.
-
-## 9. Point an email address at the Worker
-Cloudflare dashboard → your domain → Email → Email Routing → Routing rules → Create address.
-- Custom address: `leads@digitalspectrumlabs.com`
-- Action: **Send to a Worker**
-- Worker: `dsl-lead-router`
-- Save
-
-## 10. Test it
-Send a real email (from any other email account you have) to `leads@digitalspectrumlabs.com`
-with a subject and a short message, like a real enquiry. Within a minute or two, check:
-- Your Gmail — the forwarded copy should be there.
-- The GitHub repo — a new file should appear under `leads/inbox/` (refresh the repo page on
-  github.com to see it, or just ask Claude to check).
-
-If both show up, it's live. If only the Gmail forward shows up, the GitHub logging step
-failed silently (email still isn't lost) — tell Claude and it'll check the Worker logs
-(`npx wrangler tail`) to diagnose.
-
-## 11. Last step — point the site at the new address
-Done — the contact page now shows `services@digitalspectrumlabs.co.uk`. Make sure a routing rule
-exists in Cloudflare for `services@` (not just `support@`), or mail to that address will bounce.
+This token can only touch the one repo it's scoped to, nothing else in the GitHub account.

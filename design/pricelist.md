@@ -1,4 +1,4 @@
-# Digital Spectrum Labs — Price List (draft for your approval)
+# Digital Spectrum Labs — Price List (target range, not current live prices)
 
 Built 2026-08-13 from real UK market research, not invented figures. Every range below is
 sourced from current 2026 UK pricing guides — the sources are listed at the bottom so you can
@@ -11,6 +11,15 @@ carrying an agency's overheads. So most of these land in the **middle-to-upper e
 experienced-freelancer bracket and below the small-agency bracket**.
 
 **Nothing here is fixed.** Adjust anything. These are a defensible starting position.
+
+**Status as of 2026-09-01 — deliberately not what's live on the site.** With zero paying
+customers yet, the live site runs lower **introductory prices** instead of these figures (e.g.
+a Landing Page is £199 live vs the £1,200 researched here) — a deliberate choice, not an
+oversight, made so the first real clients are easy to say yes to. **This document is the target
+range to grow into, not a description of current pricing.** Once there's a real track record —
+delivered work, testimonials, a couple of retainers running — revisit these figures and move
+live prices up toward them. Until then, treat any gap between this doc and the live site as
+expected, not a bug to fix.
 
 ---
 
@@ -151,15 +160,27 @@ experienced-freelancer bracket and below the small-agency bracket**.
 
 ## Monthly Retainer — across any service
 
-Already on the site at **£450/month starting**. Market data supports this: retainers typically
-price at a **15–25% premium** over equivalent one-off project work, because the client is buying
-availability. Suggested structure:
+**What's actually live now (as of 2026-09-01):** one flat retainer per service, **£450/month
+starting**, hours not fixed to a specific number. This is deliberate — with no retainer clients
+yet, there's no usage data to know whether 5/10/20-hour tiers are even the right split, and one
+simple number is easier to sell to a first retainer client than a three-way choice.
 
-| Tier | Price | Hours |
+**Future upgrade path — not current guidance, do not build against this yet.** Market data
+supports tiering retainers by hours once there's a reason to (retainers typically price at a
+15–25% premium over equivalent one-off work, because the client is buying availability). The
+tier structure below is a *considered starting point for that future decision*, not something
+to publish now:
+
+| Tier (future) | Price | Hours |
 |---|---|---|
 | Light | **£450/month** | 5 hours |
 | Standard | **£850/month** | 10 hours |
 | Full | **£1,600/month** | 20 hours |
+
+**When to revisit this:** once a few clients have actually run on the flat £450/month retainer
+for a month or two, real usage data will show whether people are using closer to 5 hours or 20 —
+which will make these tier boundaries far more accurate than the original researched guess.
+Revisit then, not before.
 
 Unused hours roll over one month. Month-to-month, 30 days' notice — that's already in your terms.
 
@@ -176,12 +197,12 @@ From `terms.html`, so the price list must not contradict it:
 
 ---
 
-## Before you publish these
+## Before moving live prices toward these figures
 
-1. **Decide whether prices go on the website at all.** Of the seven UK competitors researched
-   earlier, **six showed no pricing at all** — only the two cheapest, most sole-trader-focused
-   ones published figures. Publishing filters time-wasters but also lets competitors undercut
-   you and can anchor you low. A middle route is publishing "from" prices only.
+1. ~~Decide whether prices go on the website at all.~~ **Resolved (live as of 2026-09-01):**
+   prices are published site-wide, at introductory levels — see the status note at the top of
+   this doc. The open question now is *when* to move toward these researched figures, not
+   *whether* to publish prices at all.
 2. **VAT.** You decided not to register yet (well under the £90k threshold). These are therefore
    VAT-free. If you register later, every price here needs revisiting — either absorb 20% or add
    it, and say which on the site.

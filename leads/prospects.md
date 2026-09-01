@@ -8,8 +8,8 @@ website form, LinkedIn, post, or phone after a TPS **and** CTPS screen.
 
 **Nothing here has been contacted. Every message is drafted and gated on the owner's approval.**
 
-Service landing pages (live host is `digitalspectrum.netlify.app` — checked 2026-08-14,
-`digitalspectrumlabs.co.uk` does not resolve yet):
+Service landing pages (live at `digitalspectrumlabs.co.uk` — confirmed resolving 2026-09-01,
+was still on `digitalspectrum.netlify.app` only as of 2026-08-14):
 websites `service-websites.html` · AI `service-ai.html` · growth `service-growth.html` ·
 video `service-video.html` · design `service-design.html`
 
