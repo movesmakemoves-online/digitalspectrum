@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digitalspectrumlabs.co.uk/sitemap.xml
