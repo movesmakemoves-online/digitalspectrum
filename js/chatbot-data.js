@@ -99,7 +99,7 @@ window.DSL_CHATBOT_DATA = {
       ],
       pricing: [
         { name: 'Content Creation (short-form)', price: '£99', detail: 'Photos, video and captions, branded to you' },
-        { name: 'Standard Edit', price: '£250', detail: 'AI-prompted edit' },
+        { name: 'Custom Edit', price: '£250', detail: 'AI-prompted edit' },
         { name: 'Music Video', price: '£350–£2,500', detail: 'From AI-generated to full film crew, script writing and storyboard' },
         { name: 'Promo Video', price: '£500–£3,000', detail: 'From AI-generated to full 8K cameras and crew' },
         { name: 'Filming (day rate)', price: '£750/day (£99/hour)', detail: 'Camera operator, lighting & sound' },
