@@ -149,7 +149,7 @@ window.DSL_CHATBOT_DATA = {
     deposit: 'Projects over £500 start with a 50% deposit; the rest is due on completion. Smaller fixed-price packages are payable in full up front.',
     refund: "You have a legal right to cancel within 14 days. If work hasn't started yet, that's a full refund. Once we've begun at your request, UK law lets us deduct a fair amount for the time and admin already spent, and refund the rest — never a blanket no-refund, but not always the full amount back either once work is under way.",
     resultsGuarantee: 'No guarantee of specific traffic, sales or rankings — those depend on your market too. We set up the system properly; the results compound from there.',
-    contact: 'No phone line — everything runs through services@digitalspectrumlabs.co.uk (within 24 hours, usually a few hours) or a booked strategy call.',
+    contact: 'No phone line — everything runs through services@digitalspectrumlabs.co.uk (within 24 hours, usually a few hours). Ask for a strategy call and we\'ll arrange one by email.',
     vat: 'Not VAT registered, so prices shown are not subject to VAT.',
   },
 
@@ -204,7 +204,7 @@ window.DSL_CHATBOT_DATA = {
     },
     {
       q: 'Can we schedule a call?',
-      a: 'Yes — a free 30-minute strategy call, by appointment (link on the Contact page). No purchase required.',
+      a: 'Yes — email us and we\'ll arrange a free 30-minute strategy call at a time that suits you. No purchase required.',
       keywords: ['call', 'strategy call', 'book a call', 'schedule', 'meeting', 'phone'],
     },
     {
@@ -264,7 +264,7 @@ window.DSL_CHATBOT_DATA = {
     },
     {
       q: 'How much time can AI/automation actually save my business?',
-      a: 'Most clients save 5–10 hours a week once things are set up. We work out a rough ROI on the strategy call.',
+      a: 'Most clients save 5–10 hours a week once things are set up. We work out a rough ROI once we understand your setup.',
       keywords: ['time save', 'how much time', 'roi', 'worth it'],
     },
     {
