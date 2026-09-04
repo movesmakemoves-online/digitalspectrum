@@ -147,7 +147,7 @@ window.DSL_CHATBOT_DATA = {
   policies: {
     quoteValidity: 'Quotes are valid for 30 days.',
     deposit: 'Projects over £500 start with a 50% deposit; the rest is due on completion. Smaller fixed-price packages are payable in full up front.',
-    refund: 'Quick purchases under £500: full refund within 30 days if unused. Custom projects: deposits are non-refundable once work has begun.',
+    refund: "You have a legal right to cancel within 14 days. If work hasn't started yet, that's a full refund. Once we've begun at your request, UK law lets us deduct a fair amount for the time and admin already spent, and refund the rest — never a blanket no-refund, but not always the full amount back either once work is under way.",
     resultsGuarantee: 'No guarantee of specific traffic, sales or rankings — those depend on your market too. We set up the system properly; the results compound from there.',
     contact: 'No phone line — everything runs through services@digitalspectrumlabs.co.uk (within 24 hours, usually a few hours) or a booked strategy call.',
     vat: 'Not VAT registered, so prices shown are not subject to VAT.',
@@ -224,7 +224,7 @@ window.DSL_CHATBOT_DATA = {
     },
     {
       q: "What's your refund policy?",
-      a: 'Quick purchases under £500: full refund within 30 days if unused. Custom projects: deposits are non-refundable once work has begun.',
+      a: "You have a legal right to cancel within 14 days. If work hasn't started yet, that's a full refund. Once we've begun at your request, UK law lets us deduct a fair amount for the time and admin already spent, and refund the rest — never a blanket no-refund, but not always the full amount back either once work is under way.",
       keywords: ['refund', 'money back', 'cancel', 'cancellation'],
     },
     {
